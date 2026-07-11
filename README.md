@@ -1,36 +1,20 @@
-# 🎨 नारायण प्रसाद मिश्र – पोर्टफोलियो वेबसाइट
-
-एक प्रिमियम, पूर्ण रूपमा रिस्पोन्सिभ, बहु-पृष्ठ व्यक्तिगत पोर्टफोलियो वेबसाइट।
-
-## ✨ विशेषताहरू
-
-- ✅ ५ पूर्ण पृष्ठहरू (गृहपृष्ठ, मेरो बारे, सेवाहरू, ब्लग, सम्पर्क)
-- ✅ डार्क थिम प्रिमियम ग्रेडियन्ट र ग्लासमोर्फिज्मसहित
-- ✅ टाइपिङ एनिमेसन, काउन्टर एनिमेसन, स्क्रोल रिभिल
-- ✅ स्टिकी नेभबार, माथि फर्किने बटन, प्रीलोडर
-- ✅ सम्पर्क फारम भ्यालिडेसनसहित
-- ✅ गुगल नक्सा (मिश्र निवास स्थान)
-- ✅ SEO मैत्री
-- ✅ पूर्ण रूपमा रिस्पोन्सिभ
-
-## 📁 फोल्डर संरचना
 website/
-├── index.html (गृहपृष्ठ)
-├── about.html (मेरो बारे)
-├── services.html (सेवाहरू)
-├── blog.html (ब्लग)
-├── contact.html (सम्पर्क)
+├── index.html          ← ✅ Root ma hunu parcha
+├── about.html
+├── services.html
+├── blog.html
+├── contact.html
 ├── assets/
-│ ├── css/
-│ │ ├── style.css
-│ │ └── responsive.css
-│ ├── js/
-│ │ └── script.js
-│ └── images/
-│ ├── logo.png
-│ ├── profile.jpg
-│ ├── gallery1.jpg
-│ ├── gallery2.jpg
-│ ├── gallery3.jpg
-│ └── gallery4.jpg
+│   ├── css/
+│   │   ├── style.css
+│   │   └── responsive.css
+│   ├── js/
+│   │   └── script.js
+│   └── images/
+│       ├── logo.png
+│       ├── profile.jpg
+│       ├── gallery1.jpg
+│       ├── gallery2.jpg
+│       ├── gallery3.jpg
+│       └── gallery4.jpg
 └── README.md
