@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ne">
+<html lang="ne" id="htmlTag">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>मेरो बारे · नारायण प्रसाद मिश्र</title>
-    <meta name="description" content="नारायण प्रसाद मिश्रको बारेमा जान्नुहोस्" />
+    <title id="pageTitle">मेरो बारे · नारायण प्रसाद मिश्र</title>
+    <meta name="description" id="metaDesc" content="नारायण प्रसाद मिश्रको बारेमा" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -20,35 +20,42 @@
 
     <nav class="navbar navbar-expand-lg sticky-nav" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><span class="brand-text">नारायण मिश्र</span></a>
+            <a class="navbar-brand" href="index.html"><span class="brand-text" id="brandName">नारायण मिश्र</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">गृहपृष्ठ</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="about.html">मेरो बारे</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">सेवाहरू</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">ब्लग</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">सम्पर्क</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html" id="navHome">गृहपृष्ठ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html" id="navAbout">मेरो बारे</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html" id="navServices">सेवाहरू</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html" id="navBlog">ब्लग</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" id="navContact">सम्पर्क</a></li>
                 </ul>
+                <div class="language-switcher ms-3">
+                    <button class="lang-btn active" data-lang="ne">🇳🇵 नेपाली</button>
+                    <button class="lang-btn" data-lang="en">🇬🇧 English</button>
+                </div>
             </div>
         </div>
     </nav>
 
-    <section class="page-header"><div class="container"><h1>मेरो बारे</h1><p>मेरो यात्रा र विशेषज्ञताको बारेमा जान्नुहोस्</p></div></section>
+    <section class="page-header"><div class="container"><h1 id="pageTitleH1">मेरो बारे</h1><p id="pageSub">मेरो यात्रा र विशेषज्ञताको बारेमा जान्नुहोस्</p></div></section>
 
     <section class="section-padding">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5"><img src="assets/images/profile.jpg" alt="Narayan Prasad Mishra" class="img-fluid rounded-4 shadow-lg" /></div>
                 <div class="col-lg-7">
-                    <h2>नारायण प्रसाद मिश्र</h2>
-                    <h5 class="text-primary">ग्राफिक डिजाइनर · UI/UX · वेब डिजाइनर · फ्रिलान्सर</h5>
-                    <p>म नेपालको बुटवलका एक भावुक सिर्जनात्मक डिजाइनर हुँ, ग्राफिक डिजाइन, वेब डिजाइन र UI/UX मा ६ वर्ष भन्दा बढी अनुभव भएको। म ब्रान्डहरूलाई उनीहरूको कथा सुन्दर, कार्यात्मक डिजाइन मार्फत भन्न मद्दत गर्छु।</p>
-                    <p>मेरो लक्ष्य भनेको पिक्सेल-परफेक्ट डिजाइनहरू प्रदान गर्नु हो जुन राम्रो मात्र देखिँदैन तर परिणाम पनि दिन्छ। म सफा कोड, विचारशील प्रयोगकर्ता अनुभव र उत्कृष्ट डिजाइनहरूमा विश्वास गर्छु।</p>
-                    <div class="row mt-4"><div class="col-sm-6"><ul class="list-unstyled"><li><i class="bi bi-check-circle-fill text-primary"></i> १२०+ प्रोजेक्ट</li><li><i class="bi bi-check-circle-fill text-primary"></i> ८५+ खुसी ग्राहक</li></ul></div><div class="col-sm-6"><ul class="list-unstyled"><li><i class="bi bi-check-circle-fill text-primary"></i> ६ वर्ष अनुभव</li><li><i class="bi bi-check-circle-fill text-primary"></i> २४ पुरस्कार</li></ul></div></div>
-                    <a href="#" class="btn btn-gradient mt-3"><i class="bi bi-download"></i> सीभी डाउनलोड गर्नुहोस्</a>
+                    <h2 id="aboutName">नारायण प्रसाद मिश्र</h2>
+                    <h5 class="text-primary" id="aboutTitle">ग्राफिक डिजाइनर · UI/UX · वेब डिजाइनर · फ्रिलान्सर</h5>
+                    <p id="aboutDesc1">म नेपालको बुटवलका एक भावुक सिर्जनात्मक डिजाइनर हुँ, ग्राफिक डिजाइन, वेब डिजाइन र UI/UX मा ६ वर्ष भन्दा बढी अनुभव भएको। म ब्रान्डहरूलाई उनीहरूको कथा सुन्दर, कार्यात्मक डिजाइन मार्फत भन्न मद्दत गर्छु।</p>
+                    <p id="aboutDesc2">मेरो लक्ष्य भनेको पिक्सेल-परफेक्ट डिजाइनहरू प्रदान गर्नु हो जुन राम्रो मात्र देखिँदैन तर परिणाम पनि दिन्छ। म सफा कोड, विचारशील प्रयोगकर्ता अनुभव र उत्कृष्ट डिजाइनहरूमा विश्वास गर्छु।</p>
+                    <div class="row mt-4">
+                        <div class="col-sm-6"><ul class="list-unstyled"><li><i class="bi bi-check-circle-fill text-primary"></i> <span id="aboutStat1">१२०+ प्रोजेक्ट</span></li><li><i class="bi bi-check-circle-fill text-primary"></i> <span id="aboutStat2">८५+ खुसी ग्राहक</span></li></ul></div>
+                        <div class="col-sm-6"><ul class="list-unstyled"><li><i class="bi bi-check-circle-fill text-primary"></i> <span id="aboutStat3">६ वर्ष अनुभव</span></li><li><i class="bi bi-check-circle-fill text-primary"></i> <span id="aboutStat4">२४ पुरस्कार</span></li></ul></div>
+                    </div>
+                    <a href="#" class="btn btn-gradient mt-3" id="aboutBtn"><i class="bi bi-download"></i> <span id="aboutBtnText">सीभी डाउनलोड गर्नुहोस्</span></a>
                 </div>
             </div>
         </div>
@@ -57,22 +64,22 @@
     <section class="section-padding bg-dark-alt">
         <div class="container">
             <div class="row g-4">
-                <div class="col-md-6"><h3>🎯 हाम्रो लक्ष्य</h3><p>समस्या समाधान गर्ने र ब्रान्डहरूको स्तर उचाल्ने अर्थपूर्ण डिजाइन सिर्जना गर्नु।</p></div>
-                <div class="col-md-6"><h3>👁️ हाम्रो दृष्टि</h3><p>नवीनता र गुणस्तरको लागि चिनिने विश्वव्यापी रूपमा मान्यता प्राप्त डिजाइनर बन्नु।</p></div>
+                <div class="col-md-6"><h3 id="missionTitle">🎯 हाम्रो लक्ष्य</h3><p id="missionDesc">समस्या समाधान गर्ने र ब्रान्डहरूको स्तर उचाल्ने अर्थपूर्ण डिजाइन सिर्जना गर्नु।</p></div>
+                <div class="col-md-6"><h3 id="visionTitle">👁️ हाम्रो दृष्टि</h3><p id="visionDesc">नवीनता र गुणस्तरको लागि चिनिने विश्वव्यापी रूपमा मान्यता प्राप्त डिजाइनर बन्नु।</p></div>
             </div>
         </div>
     </section>
 
     <section class="section-padding">
         <div class="container">
-            <h3 class="text-center mb-4">व्यावसायिक सीपहरू</h3>
+            <h3 class="text-center mb-4" id="skillsTitle">व्यावसायिक सीपहरू</h3>
             <div class="row g-4">
-                <div class="col-md-6"><div class="skill-item"><span>एडोब फोटोसप</span><div class="progress"><div class="progress-bar" style="width:95%">९५%</div></div></div></div>
-                <div class="col-md-6"><div class="skill-item"><span>वेब डिजाइनिङ</span><div class="progress"><div class="progress-bar" style="width:90%">९०%</div></div></div></div>
-                <div class="col-md-6"><div class="skill-item"><span>UI/UX डिजाइन</span><div class="progress"><div class="progress-bar" style="width:88%">८८%</div></div></div></div>
-                <div class="col-md-6"><div class="skill-item"><span>HTML5 / CSS3</span><div class="progress"><div class="progress-bar" style="width:92%">९२%</div></div></div></div>
-                <div class="col-md-6"><div class="skill-item"><span>बुटस्ट्र्याप / JS</span><div class="progress"><div class="progress-bar" style="width:85%">८५%</div></div></div></div>
-                <div class="col-md-6"><div class="skill-item"><span>रिस्पोन्सिभ डिजाइन</span><div class="progress"><div class="progress-bar" style="width:93%">९३%</div></div></div></div>
+                <div class="col-md-6"><div class="skill-item"><span id="skill1">एडोब फोटोसप</span><div class="progress"><div class="progress-bar" style="width:95%"><span id="skill1Val">९५%</span></div></div></div></div>
+                <div class="col-md-6"><div class="skill-item"><span id="skill2">वेब डिजाइनिङ</span><div class="progress"><div class="progress-bar" style="width:90%"><span id="skill2Val">९०%</span></div></div></div></div>
+                <div class="col-md-6"><div class="skill-item"><span id="skill3">UI/UX डिजाइन</span><div class="progress"><div class="progress-bar" style="width:88%"><span id="skill3Val">८८%</span></div></div></div></div>
+                <div class="col-md-6"><div class="skill-item"><span id="skill4">HTML5 / CSS3</span><div class="progress"><div class="progress-bar" style="width:92%"><span id="skill4Val">९२%</span></div></div></div></div>
+                <div class="col-md-6"><div class="skill-item"><span id="skill5">बुटस्ट्र्याप / JS</span><div class="progress"><div class="progress-bar" style="width:85%"><span id="skill5Val">८५%</span></div></div></div></div>
+                <div class="col-md-6"><div class="skill-item"><span id="skill6">रिस्पोन्सिभ डिजाइन</span><div class="progress"><div class="progress-bar" style="width:93%"><span id="skill6Val">९३%</span></div></div></div></div>
             </div>
         </div>
     </section>
@@ -80,11 +87,11 @@
     <footer class="footer">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-4"><h5>नारायण प्रसाद मिश्र</h5><p>ग्राफिक डिजाइनर · UI/UX · वेब डिजाइनर · फ्रिलान्सर</p><div class="social-icons"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-linkedin"></i></a><a href="#"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a></div></div>
-                <div class="col-lg-4"><h5>द्रुत लिङ्कहरू</h5><ul><li><a href="index.html">गृहपृष्ठ</a></li><li><a href="about.html">मेरो बारे</a></li><li><a href="services.html">सेवाहरू</a></li><li><a href="blog.html">ब्लग</a></li><li><a href="contact.html">सम्पर्क</a></li></ul></div>
-                <div class="col-lg-4"><h5>सम्पर्क</h5><p><i class="bi bi-geo-alt"></i> बुटवल-१२, नयाँगाउँ, नेपाल</p><p><i class="bi bi-phone"></i> ९८६७५४९६७५</p><p><i class="bi bi-envelope"></i> narayanmishraofficial@gmail.com</p></div>
+                <div class="col-lg-4"><h5 id="footerName">नारायण प्रसाद मिश्र</h5><p id="footerTitle">ग्राफिक डिजाइनर · UI/UX · वेब डिजाइनर · फ्रिलान्सर</p><div class="social-icons"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-linkedin"></i></a><a href="#"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a></div></div>
+                <div class="col-lg-4"><h5 id="footerLinks">द्रुत लिङ्कहरू</h5><ul><li><a href="index.html" id="fHome">गृहपृष्ठ</a></li><li><a href="about.html" id="fAbout">मेरो बारे</a></li><li><a href="services.html" id="fServices">सेवाहरू</a></li><li><a href="blog.html" id="fBlog">ब्लग</a></li><li><a href="contact.html" id="fContact">सम्पर्क</a></li></ul></div>
+                <div class="col-lg-4"><h5 id="footerContact">सम्पर्क</h5><p><i class="bi bi-geo-alt"></i> <span id="fAddress">बुटवल-१२, नयाँगाउँ, नेपाल</span></p><p><i class="bi bi-phone"></i> <span id="fPhone">९८६७५४९६७५</span></p><p><i class="bi bi-envelope"></i> <span id="fEmail">narayanmishraofficial@gmail.com</span></p></div>
             </div>
-            <div class="footer-bottom"><p>© २०२६ नारायण प्रसाद मिश्र। <i class="bi bi-heart-fill text-danger"></i> ले डिजाइन गरिएको</p></div>
+            <div class="footer-bottom"><p id="footerCopy">© २०२६ नारायण प्रसाद मिश्र। <i class="bi bi-heart-fill text-danger"></i> ले डिजाइन गरिएको</p></div>
         </div>
     </footer>
 
