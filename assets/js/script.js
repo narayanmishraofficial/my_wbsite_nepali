@@ -1,8 +1,5 @@
-// ============================================
-// PRELOADER - FIXED
-// ============================================
-document.addEventListener('DOMContentLoaded', function() {
-    // Preloader hide after page loads
+// ===== PRELOADER =====
+window.addEventListener('load', function() {
     setTimeout(function() {
         var preloader = document.getElementById('preloader');
         if (preloader) {
@@ -11,9 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 1000);
 });
 
-// ============================================
-// TYPING EFFECT
-// ============================================
+// ===== TYPING EFFECT =====
 document.addEventListener('DOMContentLoaded', function() {
     var typedText = document.getElementById('typed-text');
     if (typedText) {
@@ -48,9 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// ============================================
-// COUNTER ANIMATION
-// ============================================
+// ===== COUNTER ANIMATION =====
 document.addEventListener('DOMContentLoaded', function() {
     var counters = document.querySelectorAll('.counter');
     if (counters.length > 0) {
@@ -75,9 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// ============================================
-// SCROLL REVEAL
-// ============================================
+// ===== SCROLL REVEAL =====
 document.addEventListener('DOMContentLoaded', function() {
     var revealElements = document.querySelectorAll('.glass-card, .stat-card, .gallery-card, .blog-card, .service-card');
     
@@ -102,9 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(revealOnScroll, 500);
 });
 
-// ============================================
-// STICKY NAVBAR
-// ============================================
+// ===== STICKY NAVBAR =====
 document.addEventListener('DOMContentLoaded', function() {
     var nav = document.getElementById('mainNav');
     if (nav) {
@@ -120,9 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// ============================================
-// BACK TO TOP
-// ============================================
+// ===== BACK TO TOP =====
 document.addEventListener('DOMContentLoaded', function() {
     var backBtn = document.getElementById('backToTop');
     if (backBtn) {
@@ -140,34 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// ============================================
-// LANGUAGE SWITCHER
-// ============================================
-document.addEventListener('DOMContentLoaded', function() {
-    var langBtns = document.querySelectorAll('.lang-btn');
-    if (langBtns.length > 0) {
-        langBtns.forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                langBtns.forEach(function(b) {
-                    b.classList.remove('active');
-                });
-                this.classList.add('active');
-                
-                var lang = this.getAttribute('data-lang');
-                // Simple language toggle - you can expand this
-                if (lang === 'en') {
-                    document.querySelectorAll('[id$="Title"]').forEach(function(el) {
-                        // English translations
-                    });
-                }
-            });
-        });
-    }
-});
-
-// ============================================
-// ACTIVE NAV LINK
-// ============================================
+// ===== ACTIVE NAV LINK =====
 document.addEventListener('DOMContentLoaded', function() {
     var currentPage = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.nav-link').forEach(function(link) {
@@ -177,9 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// ============================================
-// FORM VALIDATION
-// ============================================
+// ===== FORM VALIDATION =====
 document.addEventListener('DOMContentLoaded', function() {
     var contactForm = document.getElementById('contactForm');
     if (contactForm) {
