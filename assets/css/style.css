@@ -541,3 +541,42 @@ ul { list-style: none; padding-left: 0; }
     .section-title { font-size: 1.6rem; }
     .glass-card { padding: 20px 16px; }
 }
+/* ===== Language Switcher ===== */
+.language-switcher {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+.lang-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.6);
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: 'Poppins', sans-serif;
+}
+.lang-btn:hover {
+    border-color: var(--primary);
+    color: #fff;
+}
+.lang-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+@media (max-width: 992px) {
+    .language-switcher {
+        margin-top: 10px;
+        margin-left: 0 !important;
+        justify-content: center;
+    }
+    .lang-btn {
+        padding: 4px 12px;
+        font-size: 0.75rem;
+    }
+}
