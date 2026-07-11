@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ne">
+<html lang="ne" id="htmlTag">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>सेवाहरू · नारायण प्रसाद मिश्र</title>
-    <meta name="description" content="व्यावसायिक डिजाइन सेवाहरू" />
+    <title id="pageTitle">सेवाहरू · नारायण प्रसाद मिश्र</title>
+    <meta name="description" id="metaDesc" content="व्यावसायिक डिजाइन सेवाहरू" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -20,35 +20,39 @@
 
     <nav class="navbar navbar-expand-lg sticky-nav" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><span class="brand-text">नारायण मिश्र</span></a>
+            <a class="navbar-brand" href="index.html"><span class="brand-text" id="brandName">नारायण मिश्र</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">गृहपृष्ठ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">मेरो बारे</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="services.html">सेवाहरू</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">ब्लग</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">सम्पर्क</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html" id="navHome">गृहपृष्ठ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html" id="navAbout">मेरो बारे</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html" id="navServices">सेवाहरू</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html" id="navBlog">ब्लग</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" id="navContact">सम्पर्क</a></li>
                 </ul>
+                <div class="language-switcher ms-3">
+                    <button class="lang-btn active" data-lang="ne">🇳🇵 नेपाली</button>
+                    <button class="lang-btn" data-lang="en">🇬🇧 English</button>
+                </div>
             </div>
         </div>
     </nav>
 
-    <section class="page-header"><div class="container"><h1>मेरा सेवाहरू</h1><p>म तपाईंको लागि के गर्न सक्छु ?</p></div></section>
+    <section class="page-header"><div class="container"><h1 id="pageTitleH1">मेरा सेवाहरू</h1><p id="pageSub">म तपाईंको लागि के गर्न सक्छु ?</p></div></section>
 
     <section class="section-padding">
         <div class="container">
             <div class="row g-4">
-                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-palette"></i><h5>ग्राफिक डिजाइन</h5><p>लोगो, पोस्टर, फ्लायर, ब्रोसर र ब्रान्डिङ सामग्रीहरू।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2">थप पढ्नुहोस्</a></div></div>
-                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-laptop"></i><h5>वेब डिजाइन</h5><p>तपाईंको ब्रान्ड अनुसार रिस्पोन्सिभ, आधुनिक र प्रयोगकर्ता-मैत्री वेबसाइटहरू।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2">थप पढ्नुहोस्</a></div></div>
-                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-phone"></i><h5>UI/UX डिजाइन</h5><p>मोबाइल एप, वेब एप र सफ्टवेयरको लागि प्रयोगकर्ता-केन्द्रित इन्टरफेसहरू।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2">थप पढ्नुहोस्</a></div></div>
-                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-code-square"></i><h5>वेब विकास</h5><p>सफा HTML, CSS, बुटस्ट्र्याप र जाभास्क्रिप्ट विकास रिस्पोन्सिभ डिजाइनसहित।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2">थप पढ्नुहोस्</a></div></div>
-                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-brush"></i><h5>लोगो डिजाइन</h5><p>तपाईंको ब्रान्डको सार कब्जा गर्ने अद्वितीय, यादगार लोगोहरू।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2">थप पढ्नुहोस्</a></div></div>
-                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-share"></i><h5>सोशल मिडिया डिजाइन</h5><p>इन्स्टाग्राम, फेसबुक र अन्यको लागि आकर्षक पोस्ट, ब्यानर र विज्ञापनहरू।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2">थप पढ्नुहोस्</a></div></div>
-                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-image"></i><h5>फोटो सम्पादन</h5><p>व्यावसायिक रिटचिङ, रङ करेक्सन र म्यानिपुलेसन।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2">थप पढ्नुहोस्</a></div></div>
-                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-person-workspace"></i><h5>फ्रिलान्सिङ</h5><p>कुनै पनि प्रोजेक्टको लागि लचिलो, भरपर्दो र उच्च-गुणस्तरीय डिजाइन सेवाहरू।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2">थप पढ्नुहोस्</a></div></div>
+                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-palette"></i><h5 id="s1Title">ग्राफिक डिजाइन</h5><p id="s1Desc">लोगो, पोस्टर, फ्लायर, ब्रोसर र ब्रान्डिङ सामग्रीहरू।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2" id="s1Btn">थप पढ्नुहोस्</a></div></div>
+                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-laptop"></i><h5 id="s2Title">वेब डिजाइन</h5><p id="s2Desc">तपाईंको ब्रान्ड अनुसार रिस्पोन्सिभ, आधुनिक र प्रयोगकर्ता-मैत्री वेबसाइटहरू।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2" id="s2Btn">थप पढ्नुहोस्</a></div></div>
+                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-phone"></i><h5 id="s3Title">UI/UX डिजाइन</h5><p id="s3Desc">मोबाइल एप, वेब एप र सफ्टवेयरको लागि प्रयोगकर्ता-केन्द्रित इन्टरफेसहरू।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2" id="s3Btn">थप पढ्नुहोस्</a></div></div>
+                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-code-square"></i><h5 id="s4Title">वेब विकास</h5><p id="s4Desc">सफा HTML, CSS, बुटस्ट्र्याप र जाभास्क्रिप्ट विकास रिस्पोन्सिभ डिजाइनसहित।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2" id="s4Btn">थप पढ्नुहोस्</a></div></div>
+                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-brush"></i><h5 id="s5Title">लोगो डिजाइन</h5><p id="s5Desc">तपाईंको ब्रान्डको सार कब्जा गर्ने अद्वितीय, यादगार लोगोहरू।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2" id="s5Btn">थप पढ्नुहोस्</a></div></div>
+                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-share"></i><h5 id="s6Title">सोशल मिडिया डिजाइन</h5><p id="s6Desc">इन्स्टाग्राम, फेसबुक र अन्यको लागि आकर्षक पोस्ट, ब्यानर र विज्ञापनहरू।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2" id="s6Btn">थप पढ्नुहोस्</a></div></div>
+                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-image"></i><h5 id="s7Title">फोटो सम्पादन</h5><p id="s7Desc">व्यावसायिक रिटचिङ, रङ करेक्सन र म्यानिपुलेसन।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2" id="s7Btn">थप पढ्नुहोस्</a></div></div>
+                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-person-workspace"></i><h5 id="s8Title">फ्रिलान्सिङ</h5><p id="s8Desc">कुनै पनि प्रोजेक्टको लागि लचिलो, भरपर्दो र उच्च-गुणस्तरीय डिजाइन सेवाहरू।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2" id="s8Btn">थप पढ्नुहोस्</a></div></div>
             </div>
         </div>
     </section>
@@ -56,11 +60,11 @@
     <footer class="footer">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-4"><h5>नारायण प्रसाद मिश्र</h5><p>ग्राफिक डिजाइनर · UI/UX · वेब डिजाइनर · फ्रिलान्सर</p><div class="social-icons"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-linkedin"></i></a><a href="#"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a></div></div>
-                <div class="col-lg-4"><h5>द्रुत लिङ्कहरू</h5><ul><li><a href="index.html">गृहपृष्ठ</a></li><li><a href="about.html">मेरो बारे</a></li><li><a href="services.html">सेवाहरू</a></li><li><a href="blog.html">ब्लग</a></li><li><a href="contact.html">सम्पर्क</a></li></ul></div>
-                <div class="col-lg-4"><h5>सम्पर्क</h5><p><i class="bi bi-geo-alt"></i> बुटवल-१२, नयाँगाउँ, नेपाल</p><p><i class="bi bi-phone"></i> ९८६७५४९६७५</p><p><i class="bi bi-envelope"></i> narayanmishraofficial@gmail.com</p></div>
+                <div class="col-lg-4"><h5 id="footerName">नारायण प्रसाद मिश्र</h5><p id="footerTitle">ग्राफिक डिजाइनर · UI/UX · वेब डिजाइनर · फ्रिलान्सर</p><div class="social-icons"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-linkedin"></i></a><a href="#"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a></div></div>
+                <div class="col-lg-4"><h5 id="footerLinks">द्रुत लिङ्कहरू</h5><ul><li><a href="index.html" id="fHome">गृहपृष्ठ</a></li><li><a href="about.html" id="fAbout">मेरो बारे</a></li><li><a href="services.html" id="fServices">सेवाहरू</a></li><li><a href="blog.html" id="fBlog">ब्लग</a></li><li><a href="contact.html" id="fContact">सम्पर्क</a></li></ul></div>
+                <div class="col-lg-4"><h5 id="footerContact">सम्पर्क</h5><p><i class="bi bi-geo-alt"></i> <span id="fAddress">बुटवल-१२, नयाँगाउँ, नेपाल</span></p><p><i class="bi bi-phone"></i> <span id="fPhone">९८६७५४९६७५</span></p><p><i class="bi bi-envelope"></i> <span id="fEmail">narayanmishraofficial@gmail.com</span></p></div>
             </div>
-            <div class="footer-bottom"><p>© २०२६ नारायण प्रसाद मिश्र। <i class="bi bi-heart-fill text-danger"></i> ले डिजाइन गरिएको</p></div>
+            <div class="footer-bottom"><p id="footerCopy">© २०२६ नारायण प्रसाद मिश्र। <i class="bi bi-heart-fill text-danger"></i> ले डिजाइन गरिएको</p></div>
         </div>
     </footer>
 
