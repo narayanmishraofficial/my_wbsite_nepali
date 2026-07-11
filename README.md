@@ -1,9 +1,10 @@
 website/
-├── index.html          ← ✅ Root ma hunu parcha
+├── index.html
 ├── about.html
 ├── services.html
 ├── blog.html
 ├── contact.html
+├── .nojekyll          ← Empty file
 ├── assets/
 │   ├── css/
 │   │   ├── style.css
@@ -11,7 +12,6 @@ website/
 │   ├── js/
 │   │   └── script.js
 │   └── images/
-│       ├── logo.png
 │       ├── profile.jpg
 │       ├── gallery1.jpg
 │       ├── gallery2.jpg
