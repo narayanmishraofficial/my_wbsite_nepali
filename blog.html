@@ -41,7 +41,72 @@
     </nav>
 
     <section class="page-header"><div class="container"><h1 id="pageTitleH1">📝 नवीनतम ब्लग पोस्टहरू</h1><p id="pageSub">मेरो डेस्कबाट डिजाइन अन्तरदृष्टिहरू</p></div></section>
+<!-- RSS News Section -->
+<section class="section-padding bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>ताजा समाचार (RSS News)</h2>
+      <p>नेपालका प्रमुख समाचार स्रोतहरूबाट स्वचालित अपडेट</p>
+    </div>
 
+    <div id="rss-news" class="blog-grid">
+      <!-- News cards will load here -->
+    </div>
+  </div>
+</section>
+
+<script>
+const feeds = [
+  "https://www.setopati.com/feed",
+  "https://www.ratopati.com/feed",
+  "https://ekantipur.com/rss",
+  "https://www.bbc.com/nepali/index.xml"
+];
+
+async function loadRSSNews() {
+  const container = document.getElementById('rss-news');
+  container.innerHTML = '<p>समाचार लोड हुँदैछ...</p>';
+
+  let html = '';
+
+  for (const feed of feeds) {
+    try {
+      const api = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed)}`;
+      const res = await fetch(api);
+      const data = await res.json();
+
+      if (data.items) {
+        data.items.slice(0, 2).forEach(item => {
+          html += `
+            <article class="blog-post">
+              <div class="blog-content">
+                <div class="blog-meta">
+                  <span><i class="fas fa-newspaper"></i> ${data.feed.title}</span>
+                </div>
+                <h2>
+                  <a href="${item.link}" target="_blank">
+                    ${item.title}
+                  </a>
+                </h2>
+                <p>${item.description.replace(/<[^>]*>/g, '').substring(0, 140)}...</p>
+                <a href="${item.link}" target="_blank" class="read-more">
+                  पूरा पढ्नुहोस् <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          `;
+        });
+      }
+    } catch (err) {
+      console.error('RSS error:', err);
+    }
+  }
+
+  container.innerHTML = html || '<p>समाचार लोड गर्न सकिएन।</p>';
+}
+
+loadRSSNews();
+</script>
     <section class="section-padding">
         <div class="container">
             <div class="row g-5">
