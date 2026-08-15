@@ -1,132 +1,543 @@
 <!DOCTYPE html>
-<html lang="ne" id="htmlTag">
+<html lang="ne">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="pageTitle">ब्लग · नारायण प्रसाद मिश्र</title>
-    <meta name="description" id="metaDesc" content="डिजाइन सुझाव र प्रवृत्तिहरू" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ताजा समाचार | Narayan Prasad Mishra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;700;800&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root{
+      --bg:#f3f6fb;
+      --surface:#ffffff;
+      --text:#0f172a;
+      --muted:#64748b;
+      --border:#e2e8f0;
+      --primary:#0b2a4a;
+      --primary-2:#153b63;
+      --accent:#e11d48;
+      --radius:18px;
+      --shadow:0 10px 30px rgba(2,6,23,.08);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Noto Sans Devanagari',system-ui,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    a{text-decoration:none;color:inherit}
+
+    .container{
+      width:min(1180px, calc(100% - 32px));
+      margin:0 auto;
+    }
+
+    header{
+      background:var(--primary);
+      color:#fff;
+      position:sticky;
+      top:0;
+      z-index:50;
+      box-shadow:0 6px 18px rgba(2,6,23,.18);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:16px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-family:Poppins,sans-serif;
+      font-weight:700;
+      font-size:22px;
+    }
+
+    .brand i{
+      color:#8b5cf6;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:22px;
+      align-items:center;
+      font-weight:600;
+      opacity:.95;
+    }
+
+    .nav-links a:hover{
+      color:#c7d2fe;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#0b2a4a 0%,#123d69 100%);
+      color:#fff;
+      padding:54px 0 42px;
+    }
+
+    .hero h1{
+      margin:0;
+      font-size:44px;
+      line-height:1.08;
+      font-weight:800;
+    }
+
+    .hero p{
+      margin:12px 0 0;
+      color:#dbe7ff;
+      font-size:18px;
+    }
+
+    .ticker{
+      background:#111827;
+      color:#fff;
+      border-top:1px solid rgba(255,255,255,.08);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .ticker-wrap{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      padding:10px 0;
+      overflow:hidden;
+    }
+
+    .ticker-label{
+      background:var(--accent);
+      color:#fff;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:800;
+      white-space:nowrap;
+    }
+
+    .ticker-track{
+      display:flex;
+      gap:36px;
+      min-width:max-content;
+      animation:ticker 28s linear infinite;
+    }
+
+    .ticker-track a{
+      color:#e5e7eb;
+      white-space:nowrap;
+    }
+
+    @keyframes ticker{
+      from{transform:translateX(0)}
+      to{transform:translateX(-50%)}
+    }
+
+    .toolbar{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:space-between;
+      margin:26px 0 18px;
+      flex-wrap:wrap;
+    }
+
+    .tabs{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .tab{
+      border:1px solid var(--border);
+      background:#fff;
+      color:var(--text);
+      padding:10px 16px;
+      border-radius:999px;
+      cursor:pointer;
+      font-weight:700;
+      transition:.2s ease;
+    }
+
+    .tab.active,
+    .tab:hover{
+      background:var(--primary);
+      color:#fff;
+      border-color:var(--primary);
+    }
+
+    .search{
+      position:relative;
+      min-width:260px;
+      flex:1;
+      max-width:420px;
+    }
+
+    .search input{
+      width:100%;
+      padding:12px 14px 12px 42px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      outline:none;
+      background:#fff;
+      font-size:15px;
+    }
+
+    .search i{
+      position:absolute;
+      left:14px;
+      top:50%;
+      transform:translateY(-50%);
+      color:var(--muted);
+    }
+
+    .meta-bar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      color:var(--muted);
+      font-size:14px;
+      margin-bottom:14px;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px;
+      padding-bottom:48px;
+    }
+
+    .card{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      transition:transform .18s ease, box-shadow .18s ease;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 16px 36px rgba(2,6,23,.12);
+    }
+
+    .thumb{
+      width:100%;
+      aspect-ratio:16/9;
+      object-fit:cover;
+      background:#e5e7eb;
+    }
+
+    .content{
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      flex:1;
+    }
+
+    .source{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--primary);
+      font-weight:800;
+      font-size:14px;
+    }
+
+    .title{
+      font-size:21px;
+      line-height:1.35;
+      margin:0;
+      font-weight:800;
+      color:var(--text);
+    }
+
+    .desc{
+      color:var(--muted);
+      line-height:1.75;
+      font-size:15px;
+      flex:1;
+    }
+
+    .card-footer{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      padding-top:4px;
+    }
+
+    .time{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:var(--primary);
+      color:#fff;
+      padding:10px 14px;
+      border-radius:10px;
+      font-weight:700;
+    }
+
+    .btn:hover{
+      background:var(--primary-2);
+    }
+
+    .empty{
+      grid-column:1/-1;
+      background:#fff;
+      border:1px dashed var(--border);
+      border-radius:var(--radius);
+      padding:28px;
+      text-align:center;
+      color:var(--muted);
+    }
+
+    footer{
+      background:#0b1220;
+      color:#cbd5e1;
+      padding:26px 0;
+      text-align:center;
+      font-size:14px;
+    }
+
+    @media (max-width: 980px){
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .hero h1{font-size:36px}
+    }
+
+    @media (max-width: 640px){
+      .nav{flex-direction:column;align-items:flex-start;gap:10px}
+      .nav-links{flex-wrap:wrap;gap:14px}
+      .grid{grid-template-columns:1fr}
+      .hero h1{font-size:30px}
+      .search{max-width:100%}
+    }
+  </style>
+
 </head>
 <body>
-    <div id="preloader" class="preloader"><div class="loader"></div></div>
-    <button id="backToTop" class="back-to-top"><i class="bi bi-chevron-up"></i></button>
 
-    <nav class="navbar navbar-expand-lg sticky-nav" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="index.html"><span class="brand-text" id="brandName">नारायण मिश्र</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html" id="navHome">गृहपृष्ठ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html" id="navAbout">मेरो बारे</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html" id="navServices">सेवाहरू</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="blog.html" id="navBlog">ब्लग</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html" id="navContact">सम्पर्क</a></li>
-                </ul>
-                <div class="language-switcher ms-3">
-                    <button class="lang-btn active" data-lang="ne">🇳🇵 नेपाली</button>
-                    <button class="lang-btn" data-lang="en">🇬🇧 English</button>
-                </div>
-            </div>
-        </div>
+<header>
+  <div class="container nav">
+    <div class="brand"><i class="fas fa-sparkles"></i> Narayan Mishra</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">News</a>
+      <a href="contact.html">Contact</a>
     </nav>
+  </div>
+</header>
 
-    <section class="page-header"><div class="container"><h1 id="pageTitleH1">📝 नवीनतम ब्लग पोस्टहरू</h1><p id="pageSub">मेरो डेस्कबाट डिजाइन अन्तरदृष्टिहरू</p></div></section>
-<!-- RSS News Section -->
-<section class="section-padding bg-light">
+<section class="hero">
   <div class="container">
-    <div class="section-header">
-      <h2>ताजा समाचार (RSS News)</h2>
-      <p>नेपालका प्रमुख समाचार स्रोतहरूबाट स्वचालित अपडेट</p>
-    </div>
-
-    <div id="rss-news" class="blog-grid">
-      <!-- News cards will load here -->
-    </div>
+    <h1>ताजा नेपाली समाचार</h1>
+    <p>नेपालका प्रमुख समाचार स्रोतहरूबाट स्वचालित रूपमा अपडेट हुने RSS समाचार</p>
   </div>
 </section>
 
+<div class="ticker">
+  <div class="container ticker-wrap">
+    <div class="ticker-label">BREAKING</div>
+    <div class="ticker-track" id="tickerTrack">
+      <a href="#">समाचार लोड हुँदैछ...</a>
+      <a href="#">समाचार लोड हुँदैछ...</a>
+      <a href="#">समाचार लोड हुँदैछ...</a>
+      <a href="#">समाचार लोड हुँदैछ...</a>
+    </div>
+  </div>
+</div>
+
+<main class="container">
+
+  <div class="toolbar">
+    <div class="tabs">
+      <button class="tab active" data-source="all">सबै</button>
+      <button class="tab" data-source="setopati">Setopati</button>
+      <button class="tab" data-source="ratopati">Ratopati</button>
+      <button class="tab" data-source="kantipur">Kantipur</button>
+      <button class="tab" data-source="bbc">BBC Nepali</button>
+      <button class="tab" data-source="gorkhapatra">Gorkhapatra</button>
+    </div>
+
+```
+<div class="search">
+  <i class="fas fa-search"></i>
+  <input id="searchInput" type="text" placeholder="समाचार खोज्नुहोस्...">
+</div>
+```
+
+  </div>
+
+  <div class="meta-bar">
+    <div id="statusText">समाचार लोड हुँदैछ...</div>
+    <div id="updatedText"></div>
+  </div>
+
+  <div id="newsGrid" class="grid">
+    <div class="empty">समाचार लोड हुँदैछ...</div>
+  </div>
+
+</main>
+
+<footer>
+  © 2026 Narayan Prasad Mishra • Nepali RSS News Portal
+</footer>
+
 <script>
-const feeds = [
-  "https://www.setopati.com/feed",
-  "https://www.ratopati.com/feed",
-  "https://ekantipur.com/rss",
-  "https://www.bbc.com/nepali/index.xml"
-];
-
-async function loadRSSNews() {
-  const container = document.getElementById('rss-news');
-  container.innerHTML = '<p>समाचार लोड हुँदैछ...</p>';
-
-  let html = '';
-
-  for (const feed of feeds) {
-    try {
-      const api = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed)}`;
-      const res = await fetch(api);
-      const data = await res.json();
-
-      if (data.items) {
-        data.items.slice(0, 2).forEach(item => {
-          html += `
-            <article class="blog-post">
-              <div class="blog-content">
-                <div class="blog-meta">
-                  <span><i class="fas fa-newspaper"></i> ${data.feed.title}</span>
-                </div>
-                <h2>
-                  <a href="${item.link}" target="_blank">
-                    ${item.title}
-                  </a>
-                </h2>
-                <p>${item.description.replace(/<[^>]*>/g, '').substring(0, 140)}...</p>
-                <a href="${item.link}" target="_blank" class="read-more">
-                  पूरा पढ्नुहोस् <i class="fas fa-arrow-right"></i>
-                </a>
-              </div>
-            </article>
-          `;
-        });
-      }
-    } catch (err) {
-      console.error('RSS error:', err);
-    }
+const FEEDS = {
+  setopati: {
+    label: 'Setopati',
+    url: 'https://www.setopati.com/feed'
+  },
+  ratopati: {
+    label: 'Ratopati',
+    url: 'https://www.ratopati.com/feed'
+  },
+  kantipur: {
+    label: 'Kantipur',
+    url: 'https://ekantipur.com/rss'
+  },
+  bbc: {
+    label: 'BBC Nepali',
+    url: 'https://feeds.bbci.co.uk/nepali/rss.xml'
+  },
+  gorkhapatra: {
+    label: 'Gorkhapatra',
+    url: 'https://gorkhapatraonline.com/feed'
   }
+};
 
-  container.innerHTML = html || '<p>समाचार लोड गर्न सकिएन।</p>';
+const newsGrid = document.getElementById('newsGrid');
+const tickerTrack = document.getElementById('tickerTrack');
+const statusText = document.getElementById('statusText');
+const updatedText = document.getElementById('updatedText');
+const searchInput = document.getElementById('searchInput');
+
+let allItems = [];
+let currentSource = 'all';
+
+function stripHtml(html=''){
+  const div = document.createElement('div');
+  div.innerHTML = html;
+  return div.textContent || div.innerText || '';
 }
 
-loadRSSNews();
-</script>
-    <section class="section-padding">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-8">
-                    <div class="blog-card"><img src="assets/images/gallery1.jpg" alt="Blog" class="img-fluid"/><div class="blog-body"><span class="badge bg-primary" id="b1Cat">UI/UX</span><h4 id="b1Title">२०२६ मा हावी हुने १० UI/UX प्रवृत्तिहरू</h4><p id="b1Desc">डिजाइनको परिदृश्य द्रुत रूपमा विकसित भइरहेको छ।</p><a href="#" class="btn btn-sm btn-outline-primary" id="b1Btn">थप पढ्नुहोस् →</a></div></div>
-                    <div class="blog-card"><img src="assets/images/gallery2.jpg" alt="Blog" class="img-fluid"/><div class="blog-body"><span class="badge bg-primary" id="b2Cat">फ्रिलान्स</span><h4 id="b2Title">शक्तिशाली फ्रिलान्स ब्रान्ड कसरी निर्माण गर्ने</h4><p id="b2Desc">फ्रिलान्सरको रूपमा बाहिर खडा हुन सीप मात्र भन्दा बढी चाहिन्छ।</p><a href="#" class="btn btn-sm btn-outline-primary" id="b2Btn">थप पढ्नुहोस् →</a></div></div>
-                    <div class="blog-card"><img src="assets/images/gallery3.jpg" alt="Blog" class="img-fluid"/><div class="blog-body"><span class="badge bg-primary" id="b3Cat">डिजाइन</span><h4 id="b3Title">डिजाइनमा रङ मनोविज्ञानको महारत</h4><p id="b3Desc">रङहरूले भावनाहरू जगाउँछन् र निर्णयहरूलाई प्रभाव पार्छन्।</p><a href="#" class="btn btn-sm btn-outline-primary" id="b3Btn">थप पढ्नुहोस् →</a></div></div>
-                    <nav aria-label="Page navigation"><ul class="pagination justify-content-center"><li class="page-item disabled"><a class="page-link" id="prevPage">अघिल्लो</a></li><li class="page-item active"><a class="page-link">१</a></li><li class="page-item"><a class="page-link">२</a></li><li class="page-item"><a class="page-link" id="nextPage">अर्को</a></li></ul></nav>
-                </div>
-                <div class="col-lg-4">
-                    <div class="glass-card"><h5 id="widgetSearch">🔍 खोज्नुहोस्</h5><input type="text" class="form-control" placeholder="लेखहरू खोज्नुहोस्..." id="searchPlaceholder" /></div>
-                    <div class="glass-card mt-4"><h5 id="widgetRecent">भर्खरका पोस्टहरू</h5><ul class="list-unstyled"><li><a href="#" id="r1Title">UI/UX प्रवृत्तिहरू २०२६</a></li><li><a href="#" id="r2Title">फ्रिलान्स ब्रान्डिङ</a></li><li><a href="#" id="r3Title">रङ मनोविज्ञान</a></li></ul></div>
-                    <div class="glass-card mt-4"><h5 id="widgetCategories">श्रेणीहरू</h5><span class="badge bg-secondary" id="cat1">UI/UX</span> <span class="badge bg-secondary" id="cat2">डिजाइन</span> <span class="badge bg-secondary" id="cat3">फ्रिलान्स</span></div>
-                    <div class="glass-card mt-4"><h5 id="widgetTags">ट्यागहरू</h5><span class="badge bg-primary" id="tag1">#UI/UX</span> <span class="badge bg-primary" id="tag2">#डिजाइन</span> <span class="badge bg-primary" id="tag3">#ग्राफिकडिजाइन</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
+function formatTime(dateString){
+  const d = new Date(dateString);
+  if (isNaN(d)) return '';
+  return d.toLocaleString('ne-NP');
+}
 
-    <footer class="footer">
+function renderTicker(items){
+  const top = items.slice(0,8);
+  const links = top.map(item => `<a href="${item.link}" target="_blank">${item.title}</a>`).join('');
+  tickerTrack.innerHTML = links + links;
+}
+
+function renderGrid(items){
+  if(!items.length){
+    newsGrid.innerHTML = '<div class="empty">समाचार फेला परेन।</div>';
+    return;
+  }
+
+  newsGrid.innerHTML = items.map(item => `
+    <article class="card">
+      <img class="thumb" src="${item.thumbnail || 'https://picsum.photos/800/450?blur=1'}" alt="${item.title}" loading="lazy">
+      <div class="content">
+        <div class="source"><i class="fas fa-newspaper"></i> ${item.sourceLabel}</div>
+        <h2 class="title"><a href="${item.link}" target="_blank">${item.title}</a></h2>
+        <div class="desc">${stripHtml(item.description).slice(0,160)}...</div>
+        <div class="card-footer">
+          <div class="time"><i class="far fa-clock"></i> ${formatTime(item.pubDate)}</div>
+          <a class="btn" href="${item.link}" target="_blank">पूरा पढ्नुहोस् <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </article>
+  `).join('');
+}
+
+function applyFilters(){
+  const q = searchInput.value.trim().toLowerCase();
+
+  const filtered = allItems.filter(item => {
+    const sourceOk = currentSource === 'all' || item.source === currentSource;
+    const text = `${item.title} ${stripHtml(item.description)}`.toLowerCase();
+    const queryOk = !q || text.includes(q);
+    return sourceOk && queryOk;
+  });
+
+  statusText.textContent = `${filtered.length} समाचार देखाइँदैछ`;
+  renderGrid(filtered);
+}
+
+async function fetchFeed(key, cfg){
+  const api = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(cfg.url)}`;
+  const res = await fetch(api);
+  const data = await res.json();
+
+  if(!data.items) return [];
+
+  return data.items.slice(0,8).map(item => ({
+    ...item,
+    source:key,
+    sourceLabel:cfg.label
+  }));
+}
+
+async function loadNews(){
+  statusText.textContent = 'समाचार लोड हुँदैछ...';
+
+  try{
+    const results = await Promise.allSettled(
+      Object.entries(FEEDS).map(([key,cfg]) => fetchFeed(key,cfg))
+    );
+
+    allItems = results.flatMap(r => r.status === 'fulfilled' ? r.value : []);
+    allItems.sort((a,b) => new Date(b.pubDate) - new Date(a.pubDate));
+
+    renderTicker(allItems);
+    applyFilters();
+
+    updatedText.textContent = 'अपडेट: ' + new Date().toLocaleTimeString('ne-NP');
+  }catch(err){
+    console.error(err);
+    newsGrid.innerHTML = '<div class="empty">समाचार लोड गर्न सकिएन। केही समयपछि पुन: प्रयास गर्नुहोस्।</div>';
+    statusText.textContent = 'लोड असफल';
+  }
+}
+
+document.querySelectorAll('.tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentSource = btn.dataset.source;
+    applyFilters();
+  });
+});
+searchInput.addEventListener('input', applyFilters);
+loadNews();
+setInterval(loadNews, 10 * 60 * 1000);
+</script>
+<footer class="footer">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4"><h5 id="footerName">नारायण प्रसाद मिश्र</h5><p id="footerTitle">ग्राफिक डिजाइनर · UI/UX · वेब डिजाइनर · फ्रिलान्सर</p><div class="social-icons"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-linkedin"></i></a><a href="#"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a></div></div>
@@ -141,3 +552,4 @@ loadRSSNews();
     <script src="assets/js/script.js"></script>
 </body>
 </html>
+
