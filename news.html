@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News & Articles | Narayan Prasad Mishra — Creative Designer & Software Developer</title>
+  <meta name="title" content="News & Articles | Narayan Prasad Mishra — Creative Designer & Software Developer">
+  <meta name="description" content="Read latest design trends, software development insights, UI/UX best practices, and tech tutorials curated by Narayan Prasad Mishra.">
+  <meta name="author" content="Narayan Prasad Mishra">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="./news.html">
+  <meta property="og:title" content="Design & Tech News | Narayan Prasad Mishra — Creative Designer & Software Developer">
+  <meta property="og:description" content="Stay updated with design industry trends, software development insights, and technology best practices.">
+  <meta property="og:image" content="images/hero.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/icons/logo.svg">
+
+  <!-- Bootstrap 5 CSS & Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       Navigation Bar
+       ========================================================================= -->
+  <nav class="navbar navbar-expand-lg site-navbar" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" id="navBrandLogo">
+        <img src="images/icons/logo.svg" alt="npmishra Logo" width="34" height="34">
+        <span class="brand-title">npmishra</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggleBtn">
+        <i class="bi bi-list fs-3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" id="navHome" data-i18n="nav_home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" id="navAbout" data-i18n="nav_about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html" id="navServices" data-i18n="nav_services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html" id="navGallery" data-i18n="nav_gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="news.html" id="navNews" data-i18n="nav_news">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html" id="navContact" data-i18n="nav_contact">Contact</a>
+          </li>
+          
+          <li class="nav-item ms-lg-3 my-2 my-lg-0">
+            <button class="lang-switcher-btn" id="langSwitchBtn" aria-label="Switch Language">
+              <i class="bi bi-translate"></i>
+              <span class="active-lang">EN</span> | <span>नेपाली</span>
+            </button>
+          </li>
+
+          <li class="nav-item ms-lg-2">
+            <a href="contact.html" class="btn btn-brand py-2 px-3 fs-6" id="navHireMeBtn">
+              <i class="bi bi-chat-dots-fill"></i>
+              <span data-i18n="nav_hire_me">Hire Me</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       Page Header
+       ========================================================================= -->
+  <header class="py-5 position-relative border-bottom border-secondary border-opacity-10 bg-glass">
+    <div class="container py-3">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <div class="badge-custom mb-2" data-i18n="sec_news_sub">Design Insights & Updates</div>
+          <h1 class="display-5 fw-bold text-white mb-2" data-i18n="sec_news_title">Latest Design News & Articles</h1>
+          <p class="text-muted lead m-0">
+            Real-time design trends, branding perspectives, Nepali digital media updates, and industry insights.
+          </p>
+        </div>
+        <div class="col-md-4 text-md-end mt-3 mt-md-0">
+          <button class="btn btn-outline-custom" id="btn-refresh-news">
+            <i class="bi bi-arrow-clockwise me-1"></i>
+            <span data-i18n="news_refresh">Refresh Feeds</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       News Grid Section
+       ========================================================================= -->
+  <section class="section-padding">
+    <div class="container">
+      
+      <!-- Category Filter Navigation: All, Nepali, Other -->
+      <div class="gallery-filter-nav mb-4" id="newsCategoryFilterNav">
+        <button class="filter-btn news-filter-btn active" data-news-filter="all" id="newsFilterAll">
+          <i class="bi bi-grid-fill me-1"></i>
+          <span data-i18n="news_filter_all">All Articles</span>
+        </button>
+        <button class="filter-btn news-filter-btn" data-news-filter="nepali" id="newsFilterNepali">
+          <i class="bi bi-flag-fill me-1 text-danger"></i>
+          <span data-i18n="news_filter_nepali">Nepali News</span>
+        </button>
+        <button class="filter-btn news-filter-btn" data-news-filter="other" id="newsFilterOther">
+          <i class="bi bi-globe me-1 text-info"></i>
+          <span data-i18n="news_filter_other">Other / International</span>
+        </button>
+      </div>
+
+      <!-- Live Status / Fallback Alert -->
+      <div id="news-status-alert"></div>
+
+      <!-- Feed Sources Banner -->
+      <div class="p-3 mb-4 rounded-3 bg-surface border border-secondary border-opacity-10 d-flex align-items-center justify-content-between flex-wrap gap-2 text-muted small">
+        <div class="d-flex align-items-center gap-2 flex-wrap">
+          <i class="bi bi-rss-fill text-warning"></i>
+          <span><strong>Nepali Feeds:</strong> TechPana, Nepali Times, Ratopati</span>
+          <span class="text-dim">|</span>
+          <span><strong>Other Feeds:</strong> Smashing Magazine, Design Milk, Abduzeedo</span>
+        </div>
+        <span class="badge bg-dark border border-secondary text-info">Dynamic RSS Engine</span>
+      </div>
+
+      <!-- Dynamic Cards Grid -->
+      <div class="row g-4" id="news-grid-container">
+        <!-- Injected via js/news.js with skeleton loader -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="row g-4">
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <img src="images/icons/logo.svg" alt="NPM Logo" width="34" height="34">
+            <h3 class="footer-brand-title m-0" data-i18n="brand_name">Narayan Prasad Mishra</h3>
+          </div>
+          <p class="small text-muted mb-3" data-i18n="footer_desc">
+            Narayan Prasad Mishra is a professional Graphics Designer based in Butwal, Nepal, specializing in brand identities, print media, and digital graphics.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://facebook.com/npmishraofficial" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Facebook" title="Facebook (@npmishraofficial)"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com/npmishraofficial" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Instagram" title="Instagram (@npmishraofficial)"><i class="bi bi-instagram"></i></a>
+            <a href="https://youtube.com/@npmishraofficial" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="YouTube" title="YouTube Channel (@npmishraofficial)"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+          <h4 class="footer-heading" data-i18n="footer_quick_links">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav_about">About</a></li>
+            <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+            <li><a href="gallery.html" data-i18n="nav_gallery">Gallery</a></li>
+            <li><a href="news.html" data-i18n="nav_news">News</a></li>
+            <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-6">
+          <h4 class="footer-heading" data-i18n="footer_services_links">Design Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html" data-i18n="srv_graphic_title">Graphic Design</a></li>
+            <li><a href="services.html" data-i18n="srv_logo_title">Logo Design</a></li>
+            <li><a href="services.html" data-i18n="srv_branding_title">Branding & Identity</a></li>
+            <li><a href="services.html" data-i18n="srv_social_title">Social Media Design</a></li>
+            <li><a href="services.html" data-i18n="srv_print_title">Print Design</a></li>
+            <li><a href="services.html" data-i18n="srv_photo_title">Photo Editing</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading" data-i18n="footer_contact_info">Contact Information</h4>
+          <ul class="footer-links">
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-geo-alt-fill text-primary"></i>
+              <a href="https://www.google.com/maps/place/Mishra+Niwash/@27.6842177,83.4197148,734m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3996870023d77da5:0x20100287e9455cc3!8m2!3d27.684213!4d83.4222897!16s%2Fg%2F11zh8rxd38?entry=ttu" target="_blank" rel="noopener noreferrer" title="View Mishra Niwash on Google Maps">
+                <span data-i18n="footer_address">Mishra Niwash, Butwal-12, Nepal</span>
+              </a>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-telephone-fill text-success"></i>
+              <a href="tel:9867549675">9867549675</a>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-envelope-fill text-info"></i>
+              <a href="mailto:menpmishra@gmail.com">menpmishra@gmail.com</a>
+            </li>
+            <li class="mt-3">
+              <a href="documents/narayan-prasad-mishra-cv.pdf" target="_blank" class="btn btn-sm btn-outline-custom w-100">
+                <i class="bi bi-file-earmark-pdf me-1"></i> <span data-i18n="about_view_cv">View CV (PDF)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n="footer_copyright">
+          © <span class="current-year">2026</span> Narayan Prasad Mishra. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Back to Top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="js/language.js"></script>
+  <script src="js/news.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

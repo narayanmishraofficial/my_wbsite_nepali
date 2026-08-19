@@ -1,101 +1,473 @@
 <!DOCTYPE html>
-<html lang="ne" id="htmlTag">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="pageTitle">मेरो बारे · नारायण प्रसाद मिश्र</title>
-    <meta name="description" id="metaDesc" content="नारायण प्रसाद मिश्रको बारेमा" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Narayan Prasad Mishra — Creative Designer & Software Developer</title>
+  <meta name="title" content="About Me | Narayan Prasad Mishra — Creative Designer & Software Developer">
+  <meta name="description" content="Learn more about Narayan Prasad Mishra, a Creative Designer & Software Developer based in Butwal-12, Nayagaun, Nepal. Explore skills, design & coding philosophy, and view CV.">
+  <meta name="author" content="Narayan Prasad Mishra">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="./about.html">
+  <meta property="og:title" content="About Narayan Prasad Mishra | Creative Designer & Software Developer">
+  <meta property="og:description" content="Learn more about Narayan Prasad Mishra's background, design & software engineering philosophy, core skills, and CV.">
+  <meta property="og:image" content="images/profile.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/icons/logo.svg">
+
+  <!-- Bootstrap 5 CSS & Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="preloader" class="preloader"><div class="loader"></div></div>
-    <button id="backToTop" class="back-to-top"><i class="bi bi-chevron-up"></i></button>
 
-    <nav class="navbar navbar-expand-lg sticky-nav" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="index.html"><span class="brand-text" id="brandName">नारायण मिश्र</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-                <span class="navbar-toggler-icon"></span>
+  <!-- =========================================================================
+       Navigation Bar
+       ========================================================================= -->
+  <nav class="navbar navbar-expand-lg site-navbar" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" id="navBrandLogo">
+        <img src="images/icons/logo.svg" alt="npmishra Logo" width="34" height="34">
+        <span class="brand-title">npmishra</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggleBtn">
+        <i class="bi bi-list fs-3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" id="navHome" data-i18n="nav_home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html" id="navAbout" data-i18n="nav_about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html" id="navServices" data-i18n="nav_services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html" id="navGallery" data-i18n="nav_gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news.html" id="navNews" data-i18n="nav_news">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html" id="navContact" data-i18n="nav_contact">Contact</a>
+          </li>
+          
+          <li class="nav-item ms-lg-3 my-2 my-lg-0">
+            <button class="lang-switcher-btn" id="langSwitchBtn" aria-label="Switch Language">
+              <i class="bi bi-translate"></i>
+              <span class="active-lang">EN</span> | <span>नेपाली</span>
             </button>
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html" id="navHome">गृहपृष्ठ</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="about.html" id="navAbout">मेरो बारे</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html" id="navServices">सेवाहरू</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html" id="navBlog">ब्लग</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html" id="navContact">सम्पर्क</a></li>
-                </ul>
-                <div class="language-switcher ms-3">
-                    <button class="lang-btn active" data-lang="ne">🇳🇵 नेपाली</button>
-                    <button class="lang-btn" data-lang="en">🇬🇧 English</button>
+          </li>
+
+          <li class="nav-item ms-lg-2">
+            <a href="contact.html" class="btn btn-brand py-2 px-3 fs-6" id="navHireMeBtn">
+              <i class="bi bi-chat-dots-fill"></i>
+              <span data-i18n="nav_hire_me">Hire Me</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       Page Header / Breadcrumb Banner
+       ========================================================================= -->
+  <header class="py-5 position-relative border-bottom border-secondary border-opacity-10 bg-glass">
+    <div class="container py-3">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <div class="badge-custom mb-2" data-i18n="sec_about_sub">About Me</div>
+          <h1 class="display-5 fw-bold text-white mb-2" data-i18n="about_bio_heading">Biography & Background</h1>
+          <p class="text-muted lead m-0" data-i18n="sec_about_title">
+            Where Creative Design Meets Modern Software Engineering.
+          </p>
+        </div>
+        <div class="col-md-4 text-md-end mt-3 mt-md-0">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-md-end m-0">
+              <li class="breadcrumb-item"><a href="index.html" class="text-muted" data-i18n="nav_home">Home</a></li>
+              <li class="breadcrumb-item active text-white" aria-current="page" data-i18n="nav_about">About</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       About Profile & Details Section
+       ========================================================================= -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row g-5 align-items-start">
+        
+        <!-- Profile Image & Quick Contact Card -->
+        <div class="col-lg-5">
+          <div class="about-profile-card mb-4" id="aboutProfileCard">
+            <img src="images/profile.jpg" alt="Narayan Prasad Mishra - Graphics Designer" id="aboutProfileImg" onerror="this.src='images/hero.jpg'">
+          </div>
+
+          <!-- Enhanced Personal Details Card -->
+          <div class="personal-details-card mb-4" id="aboutPersonalDetailsCard">
+            <div class="d-flex align-items-center justify-content-between mb-3 border-bottom border-secondary border-opacity-25 pb-2">
+              <h3 class="fs-5 fw-bold text-white m-0 d-flex align-items-center gap-2">
+                <i class="bi bi-person-lines-fill text-primary"></i>
+                <span data-i18n="about_personal_details">Personal Details</span>
+              </h3>
+              <span class="badge bg-success bg-opacity-20 text-success border border-success border-opacity-30 small">
+                <i class="bi bi-dot"></i> <span data-i18n="hero_badge_available">Available for Work</span>
+              </span>
+            </div>
+            
+            <div class="d-flex flex-column">
+              <!-- Address -->
+              <div class="personal-detail-item">
+                <div class="detail-label-group">
+                  <div class="detail-icon-circle">
+                    <i class="bi bi-geo-alt-fill text-primary"></i>
+                  </div>
+                  <span data-i18n="about_location_label">Address</span>
                 </div>
-            </div>
-        </div>
-    </nav>
-
-    <section class="page-header"><div class="container"><h1 id="pageTitleH1">मेरो बारे</h1><p id="pageSub">मेरो यात्रा र विशेषज्ञताको बारेमा जान्नुहोस्</p></div></section>
-
-    <section class="section-padding">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-5"><img src="assets/images/profile.jpg" alt="Narayan Prasad Mishra" class="img-fluid rounded-4 shadow-lg" /></div>
-                <div class="col-lg-7">
-                    <h2 id="aboutName">नारायण प्रसाद मिश्र</h2>
-                    <h5 class="text-primary" id="aboutTitle">ग्राफिक डिजाइनर · UI/UX · वेब डिजाइनर · फ्रिलान्सर</h5>
-                    <p id="aboutDesc1">म नेपालको बुटवलका एक भावुक सिर्जनात्मक डिजाइनर हुँ, ग्राफिक डिजाइन, वेब डिजाइन र UI/UX मा ६ वर्ष भन्दा बढी अनुभव भएको। म ब्रान्डहरूलाई उनीहरूको कथा सुन्दर, कार्यात्मक डिजाइन मार्फत भन्न मद्दत गर्छु।</p>
-                    <p id="aboutDesc2">मेरो लक्ष्य भनेको पिक्सेल-परफेक्ट डिजाइनहरू प्रदान गर्नु हो जुन राम्रो मात्र देखिँदैन तर परिणाम पनि दिन्छ। म सफा कोड, विचारशील प्रयोगकर्ता अनुभव र उत्कृष्ट डिजाइनहरूमा विश्वास गर्छु।</p>
-                    <div class="row mt-4">
-                        <div class="col-sm-6"><ul class="list-unstyled"><li><i class="bi bi-check-circle-fill text-primary"></i> <span id="aboutStat1">१२०+ प्रोजेक्ट</span></li><li><i class="bi bi-check-circle-fill text-primary"></i> <span id="aboutStat2">८५+ खुसी ग्राहक</span></li></ul></div>
-                        <div class="col-sm-6"><ul class="list-unstyled"><li><i class="bi bi-check-circle-fill text-primary"></i> <span id="aboutStat3">६ वर्ष अनुभव</span></li><li><i class="bi bi-check-circle-fill text-primary"></i> <span id="aboutStat4">२४ पुरस्कार</span></li></ul></div>
-                    </div>
-                    <a href="#" class="btn btn-gradient mt-3" id="aboutBtn"><i class="bi bi-download"></i> <span id="aboutBtnText">सीभी डाउनलोड गर्नुहोस्</span></a>
+                <div class="detail-value">
+                  <a href="https://www.google.com/maps/place/Mishra+Niwash/@27.6842177,83.4197148,734m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3996870023d77da5:0x20100287e9455cc3!8m2!3d27.684213!4d83.4222897!16s%2Fg%2F11zh8rxd38?entry=ttu" target="_blank" rel="noopener noreferrer" title="View Mishra Niwash on Google Maps">
+                    <span data-i18n="location_badge">Butwal-12, Nayagaun, Nepal</span>
+                    <i class="bi bi-box-arrow-up-right ms-1 small text-primary"></i>
+                  </a>
                 </div>
-            </div>
-        </div>
-    </section>
+              </div>
 
-    <section class="section-padding bg-dark-alt">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-6"><h3 id="missionTitle">🎯 हाम्रो लक्ष्य</h3><p id="missionDesc">समस्या समाधान गर्ने र ब्रान्डहरूको स्तर उचाल्ने अर्थपूर्ण डिजाइन सिर्जना गर्नु।</p></div>
-                <div class="col-md-6"><h3 id="visionTitle">👁️ हाम्रो दृष्टि</h3><p id="visionDesc">नवीनता र गुणस्तरको लागि चिनिने विश्वव्यापी रूपमा मान्यता प्राप्त डिजाइनर बन्नु।</p></div>
-            </div>
-        </div>
-    </section>
+              <!-- Phone -->
+              <div class="personal-detail-item">
+                <div class="detail-label-group">
+                  <div class="detail-icon-circle">
+                    <i class="bi bi-telephone-fill text-success"></i>
+                  </div>
+                  <span data-i18n="about_phone_label">Phone</span>
+                </div>
+                <div class="detail-value">
+                  <a href="tel:9867549675" class="text-success fw-bold">9867549675</a>
+                </div>
+              </div>
 
-    <section class="section-padding">
-        <div class="container">
-            <h3 class="text-center mb-4" id="skillsTitle">व्यावसायिक सीपहरू</h3>
-            <div class="row g-4">
-                <div class="col-md-6"><div class="skill-item"><span id="skill1">एडोब फोटोसप</span><div class="progress"><div class="progress-bar" style="width:95%"><span id="skill1Val">९५%</span></div></div></div></div>
-                <div class="col-md-6"><div class="skill-item"><span id="skill2">वेब डिजाइनिङ</span><div class="progress"><div class="progress-bar" style="width:90%"><span id="skill2Val">९०%</span></div></div></div></div>
-                <div class="col-md-6"><div class="skill-item"><span id="skill3">UI/UX डिजाइन</span><div class="progress"><div class="progress-bar" style="width:88%"><span id="skill3Val">८८%</span></div></div></div></div>
-                <div class="col-md-6"><div class="skill-item"><span id="skill4">HTML5 / CSS3</span><div class="progress"><div class="progress-bar" style="width:92%"><span id="skill4Val">९२%</span></div></div></div></div>
-                <div class="col-md-6"><div class="skill-item"><span id="skill5">बुटस्ट्र्याप / JS</span><div class="progress"><div class="progress-bar" style="width:85%"><span id="skill5Val">८५%</span></div></div></div></div>
-                <div class="col-md-6"><div class="skill-item"><span id="skill6">रिस्पोन्सिभ डिजाइन</span><div class="progress"><div class="progress-bar" style="width:93%"><span id="skill6Val">९३%</span></div></div></div></div>
-            </div>
-        </div>
-    </section>
+              <!-- Email -->
+              <div class="personal-detail-item">
+                <div class="detail-label-group">
+                  <div class="detail-icon-circle">
+                    <i class="bi bi-envelope-fill text-info"></i>
+                  </div>
+                  <span data-i18n="about_email_label">Email</span>
+                </div>
+                <div class="detail-value">
+                  <a href="mailto:menpmishra@gmail.com" class="text-info">menpmishra@gmail.com</a>
+                </div>
+              </div>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4"><h5 id="footerName">नारायण प्रसाद मिश्र</h5><p id="footerTitle">ग्राफिक डिजाइनर · UI/UX · वेब डिजाइनर · फ्रिलान्सर</p><div class="social-icons"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-linkedin"></i></a><a href="#"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a></div></div>
-                <div class="col-lg-4"><h5 id="footerLinks">द्रुत लिङ्कहरू</h5><ul><li><a href="index.html" id="fHome">गृहपृष्ठ</a></li><li><a href="about.html" id="fAbout">मेरो बारे</a></li><li><a href="services.html" id="fServices">सेवाहरू</a></li><li><a href="blog.html" id="fBlog">ब्लग</a></li><li><a href="contact.html" id="fContact">सम्पर्क</a></li></ul></div>
-                <div class="col-lg-4"><h5 id="footerContact">सम्पर्क</h5><p><i class="bi bi-geo-alt"></i> <span id="fAddress">बुटवल-१२, नयाँगाउँ, नेपाल</span></p><p><i class="bi bi-phone"></i> <span id="fPhone">९८६७५४९६७५</span></p><p><i class="bi bi-envelope"></i> <span id="fEmail">narayanmishraofficial@gmail.com</span></p></div>
-            </div>
-            <div class="footer-bottom"><p id="footerCopy">© २०२६ नारायण प्रसाद मिश्र। <i class="bi bi-heart-fill text-danger"></i> ले डिजाइन गरिएको</p></div>
-        </div>
-    </footer>
+              <!-- Profession -->
+              <div class="personal-detail-item">
+                <div class="detail-label-group">
+                  <div class="detail-icon-circle">
+                    <i class="bi bi-palette-fill text-warning"></i>
+                  </div>
+                  <span data-i18n="about_profession_label">Profession</span>
+                </div>
+                <div class="detail-value" data-i18n="brand_role">Graphics Designer</div>
+              </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
+              <!-- Experience -->
+              <div class="personal-detail-item">
+                <div class="detail-label-group">
+                  <div class="detail-icon-circle">
+                    <i class="bi bi-briefcase-fill text-primary"></i>
+                  </div>
+                  <span data-i18n="about_experience_label">Experience</span>
+                </div>
+                <div class="detail-value" data-i18n="about_experience_val">5+ Years in Industry</div>
+              </div>
+
+              <!-- Availability -->
+              <div class="personal-detail-item">
+                <div class="detail-label-group">
+                  <div class="detail-icon-circle">
+                    <i class="bi bi-check-circle-fill text-success"></i>
+                  </div>
+                  <span data-i18n="about_availability_label">Availability</span>
+                </div>
+                <div class="detail-value text-success" data-i18n="about_availability_val">Available for Freelance & Projects</div>
+              </div>
+
+              <!-- Languages -->
+              <div class="personal-detail-item">
+                <div class="detail-label-group">
+                  <div class="detail-icon-circle">
+                    <i class="bi bi-translate text-purple"></i>
+                  </div>
+                  <span data-i18n="about_languages_label">Languages</span>
+                </div>
+                <div class="detail-value" data-i18n="about_languages_val">Nepali, English, Hindi</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CV Action Buttons Box -->
+          <div class="p-4 rounded-4 bg-surface border border-primary border-opacity-25 text-center">
+            <i class="bi bi-file-earmark-pdf-fill fs-1 text-primary mb-2 d-block"></i>
+            <h4 class="text-white fs-5 fw-bold mb-1">Official Curriculum Vitae</h4>
+            <p class="text-muted small mb-3">View complete professional design resume in PDF format.</p>
+            <a href="documents/narayan-prasad-mishra-cv.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-brand w-100 py-2 fs-6" id="btnViewCvAbout">
+              <i class="bi bi-eye-fill me-1"></i>
+              <span data-i18n="about_view_cv">View CV (PDF)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Biography, Philosophy & Skills -->
+        <div class="col-lg-7">
+          
+          <!-- Bio Section -->
+          <div class="mb-5">
+            <div class="badge-custom mb-3">
+              <i class="bi bi-award-fill"></i>
+              <span data-i18n="brand_role">Creative Designer & Software Developer</span>
+            </div>
+            <h2 class="section-title text-white mb-3" data-i18n="about_bio_heading">Biography & Background</h2>
+            <p class="bio-lead text-white-bright mb-3" data-i18n="about_bio_p1">
+              I am Narayan Prasad Mishra, a Creative Designer & Software Developer based at Mishra Niwash, Butwal-12, Nayagaun, Nepal. I specialize in the intersection of visual arts and software engineering — designing clean, memorable brand identities while writing modern, responsive, and robust code.
+            </p>
+            <p class="bio-paragraph text-body-clear mb-0" data-i18n="about_bio_p2">
+              My multidisciplinary background allows me to take ideas seamlessly from initial design concepts and Figma wireframes to full-fledged digital products and print-ready branding systems. I take pride in delivering precision, aesthetic excellence, and scalable solutions for clients and businesses.
+            </p>
+          </div>
+
+          <!-- Design Philosophy Box -->
+          <div class="p-4 rounded-4 bg-surface border border-secondary border-opacity-25 mb-5 position-relative">
+            <i class="bi bi-quote fs-1 text-primary position-absolute top-0 end-0 me-3 mt-2 opacity-25"></i>
+            <h3 class="fs-4 fw-bold text-white mb-3" data-i18n="about_philosophy_heading">Design & Engineering Philosophy</h3>
+            <p class="philosophy-quote fst-italic mb-0" data-i18n="about_philosophy_text">
+              "Great products emerge when creative aesthetics and clean software engineering work in perfect harmony. Every visual detail must inspire, and every line of code must perform flawlessly."
+            </p>
+          </div>
+
+          <!-- Software Proficiency & Skills -->
+          <div class="mb-5">
+            <h3 class="fs-4 fw-bold text-white mb-3" data-i18n="about_skills_heading">Skills & Software Proficiency</h3>
+            
+            <div class="row g-3 mb-4">
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border border-secondary border-opacity-15">
+                  <div class="d-flex justify-content-between small fw-bold text-white mb-1">
+                    <span><i class="bi bi-brush-fill text-primary me-2"></i>Adobe Photoshop & Graphic Design</span>
+                    <span class="text-primary fw-bold">95%</span>
+                  </div>
+                  <div class="skill-progress-bar">
+                    <div class="skill-progress-fill" style="width: 95%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border border-secondary border-opacity-15">
+                  <div class="d-flex justify-content-between small fw-bold text-white mb-1">
+                    <span><i class="bi bi-code-slash text-success me-2"></i>Web & Software Development (JS/TS/React)</span>
+                    <span class="text-success fw-bold">92%</span>
+                  </div>
+                  <div class="skill-progress-bar">
+                    <div class="skill-progress-fill" style="width: 92%; background: var(--gradient-brand);"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border border-secondary border-opacity-15">
+                  <div class="d-flex justify-content-between small fw-bold text-white mb-1">
+                    <span><i class="bi bi-vector-pen text-warning me-2"></i>Adobe Illustrator & Vector Art</span>
+                    <span class="text-warning fw-bold">92%</span>
+                  </div>
+                  <div class="skill-progress-bar">
+                    <div class="skill-progress-fill" style="width: 92%; background: var(--gradient-warm);"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border border-secondary border-opacity-15">
+                  <div class="d-flex justify-content-between small fw-bold text-white mb-1">
+                    <span><i class="bi bi-layout-text-window text-info me-2"></i>UI/UX & Figma Design Systems</span>
+                    <span class="text-info fw-bold">90%</span>
+                  </div>
+                  <div class="skill-progress-bar">
+                    <div class="skill-progress-fill" style="width: 90%; background: var(--gradient-cyan-blue);"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border border-secondary border-opacity-15">
+                  <div class="d-flex justify-content-between small fw-bold text-white mb-1">
+                    <span><i class="bi bi-book-half text-danger me-2"></i>Adobe InDesign & Prepress Printing</span>
+                    <span class="text-danger fw-bold">88%</span>
+                  </div>
+                  <div class="skill-progress-bar">
+                    <div class="skill-progress-fill" style="width: 88%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="p-3 bg-surface rounded-3 border border-secondary border-opacity-15">
+                  <div class="d-flex justify-content-between small fw-bold text-white mb-1">
+                    <span><i class="bi bi-hdd-network text-purple me-2"></i>Backend, APIs & Databases</span>
+                    <span class="text-info fw-bold">85%</span>
+                  </div>
+                  <div class="skill-progress-bar">
+                    <div class="skill-progress-fill" style="width: 85%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skill Tags -->
+            <div class="d-flex flex-wrap gap-2">
+              <span class="skill-tag"><i class="bi bi-tag-fill text-primary"></i> Brand Identity</span>
+              <span class="skill-tag"><i class="bi bi-tag-fill text-primary"></i> Software Engineering</span>
+              <span class="skill-tag"><i class="bi bi-tag-fill text-primary"></i> UI/UX Design</span>
+              <span class="skill-tag"><i class="bi bi-tag-fill text-primary"></i> Web Applications</span>
+              <span class="skill-tag"><i class="bi bi-tag-fill text-primary"></i> Logo Creation</span>
+              <span class="skill-tag"><i class="bi bi-tag-fill text-primary"></i> Clean Code & APIs</span>
+              <span class="skill-tag"><i class="bi bi-tag-fill text-primary"></i> Typography Systems</span>
+              <span class="skill-tag"><i class="bi bi-tag-fill text-primary"></i> Packaging & Print (CMYK)</span>
+            </div>
+          </div>
+
+          <!-- Experience Milestones -->
+          <div class="mb-4">
+            <h3 class="fs-4 fw-bold text-white mb-3" data-i18n="about_experience_heading">Professional Experience</h3>
+            <div class="position-relative ps-4 border-start border-primary border-opacity-50">
+              
+              <div class="mb-4 position-relative">
+                <span class="badge bg-primary text-white position-absolute" style="left: -32px; top: 0;">•</span>
+                <h4 class="fs-6 fw-bold text-white m-0">Lead Creative Designer & Software Developer</h4>
+                <div class="text-primary-light fw-semibold small mb-1">Creative Media & Tech, Butwal (2022 – Present)</div>
+                <p class="text-body-clear small m-0">Leading brand identity, UI/UX architecture, digital design systems, and frontend/web applications for regional enterprises and startups.</p>
+              </div>
+
+              <div class="mb-4 position-relative">
+                <span class="badge bg-secondary text-white position-absolute" style="left: -32px; top: 0;">•</span>
+                <h4 class="fs-6 fw-bold text-white m-0">Freelance Visual Designer & Web Developer</h4>
+                <div class="text-primary-light fw-semibold small mb-1">Remote & Nationwide Clients (2020 – 2022)</div>
+                <p class="text-body-clear small m-0">Crafted 100+ creative designs, marketing campaigns, websites, and brand collaterals for diverse businesses across Nepal.</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="row g-4">
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <img src="images/icons/logo.svg" alt="NPM Logo" width="34" height="34">
+            <h3 class="footer-brand-title m-0" data-i18n="brand_name">Narayan Prasad Mishra</h3>
+          </div>
+          <p class="small text-muted mb-3" data-i18n="footer_desc">
+            Narayan Prasad Mishra is a professional Graphics Designer based in Butwal, Nepal, specializing in brand identities, print media, and digital graphics.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://facebook.com/npmishraofficial" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Facebook" title="Facebook (@npmishraofficial)"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com/npmishraofficial" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Instagram" title="Instagram (@npmishraofficial)"><i class="bi bi-instagram"></i></a>
+            <a href="https://youtube.com/@npmishraofficial" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="YouTube" title="YouTube Channel (@npmishraofficial)"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+          <h4 class="footer-heading" data-i18n="footer_quick_links">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav_about">About</a></li>
+            <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+            <li><a href="gallery.html" data-i18n="nav_gallery">Gallery</a></li>
+            <li><a href="news.html" data-i18n="nav_news">News</a></li>
+            <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-6">
+          <h4 class="footer-heading" data-i18n="footer_services_links">Design Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html" data-i18n="srv_graphic_title">Graphic Design</a></li>
+            <li><a href="services.html" data-i18n="srv_logo_title">Logo Design</a></li>
+            <li><a href="services.html" data-i18n="srv_branding_title">Branding & Identity</a></li>
+            <li><a href="services.html" data-i18n="srv_social_title">Social Media Design</a></li>
+            <li><a href="services.html" data-i18n="srv_print_title">Print Design</a></li>
+            <li><a href="services.html" data-i18n="srv_photo_title">Photo Editing</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading" data-i18n="footer_contact_info">Contact Information</h4>
+          <ul class="footer-links">
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-geo-alt-fill text-primary"></i>
+              <a href="https://www.google.com/maps/place/Mishra+Niwash/@27.6842177,83.4197148,734m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3996870023d77da5:0x20100287e9455cc3!8m2!3d27.684213!4d83.4222897!16s%2Fg%2F11zh8rxd38?entry=ttu" target="_blank" rel="noopener noreferrer" title="View Mishra Niwash on Google Maps">
+                <span data-i18n="footer_address">Mishra Niwash, Butwal-12, Nepal</span>
+              </a>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-telephone-fill text-success"></i>
+              <a href="tel:9867549675">9867549675</a>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-envelope-fill text-info"></i>
+              <a href="mailto:menpmishra@gmail.com">menpmishra@gmail.com</a>
+            </li>
+            <li class="mt-3">
+              <a href="documents/narayan-prasad-mishra-cv.pdf" target="_blank" class="btn btn-sm btn-outline-custom w-100">
+                <i class="bi bi-file-earmark-pdf me-1"></i> <span data-i18n="about_view_cv">View CV (PDF)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n="footer_copyright">
+          © <span class="current-year">2026</span> Narayan Prasad Mishra. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Back to Top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="js/language.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

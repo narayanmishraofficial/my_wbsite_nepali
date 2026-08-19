@@ -1,74 +1,411 @@
 <!DOCTYPE html>
-<html lang="ne" id="htmlTag">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="pageTitle">सेवाहरू · नारायण प्रसाद मिश्र</title>
-    <meta name="description" id="metaDesc" content="व्यावसायिक डिजाइन सेवाहरू" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Narayan Prasad Mishra — Creative Designer & Software Developer</title>
+  <meta name="title" content="Services | Narayan Prasad Mishra — Creative Designer & Software Developer">
+  <meta name="description" content="Professional design & software development services by Narayan Prasad Mishra in Butwal, Nepal. Brand identity, UI/UX, software development, print design, and social media.">
+  <meta name="author" content="Narayan Prasad Mishra">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="./services.html">
+  <meta property="og:title" content="Services | Narayan Prasad Mishra — Creative Designer & Software Developer">
+  <meta property="og:description" content="Explore custom brand identity, UI/UX design, software development, social media campaigns, and print solutions.">
+  <meta property="og:image" content="images/hero.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/icons/logo.svg">
+
+  <!-- Bootstrap 5 CSS & Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="preloader" class="preloader"><div class="loader"></div></div>
-    <button id="backToTop" class="back-to-top"><i class="bi bi-chevron-up"></i></button>
 
-    <nav class="navbar navbar-expand-lg sticky-nav" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="index.html"><span class="brand-text" id="brandName">नारायण मिश्र</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-                <span class="navbar-toggler-icon"></span>
+  <!-- =========================================================================
+       Navigation Bar
+       ========================================================================= -->
+  <nav class="navbar navbar-expand-lg site-navbar" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" id="navBrandLogo">
+        <img src="images/icons/logo.svg" alt="npmishra Logo" width="34" height="34">
+        <span class="brand-title">npmishra</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggleBtn">
+        <i class="bi bi-list fs-3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" id="navHome" data-i18n="nav_home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" id="navAbout" data-i18n="nav_about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="services.html" id="navServices" data-i18n="nav_services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html" id="navGallery" data-i18n="nav_gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news.html" id="navNews" data-i18n="nav_news">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html" id="navContact" data-i18n="nav_contact">Contact</a>
+          </li>
+          
+          <li class="nav-item ms-lg-3 my-2 my-lg-0">
+            <button class="lang-switcher-btn" id="langSwitchBtn" aria-label="Switch Language">
+              <i class="bi bi-translate"></i>
+              <span class="active-lang">EN</span> | <span>नेपाली</span>
             </button>
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html" id="navHome">गृहपृष्ठ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html" id="navAbout">मेरो बारे</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="services.html" id="navServices">सेवाहरू</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html" id="navBlog">ब्लग</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html" id="navContact">सम्पर्क</a></li>
-                </ul>
-                <div class="language-switcher ms-3">
-                    <button class="lang-btn active" data-lang="ne">🇳🇵 नेपाली</button>
-                    <button class="lang-btn" data-lang="en">🇬🇧 English</button>
-                </div>
-            </div>
+          </li>
+
+          <li class="nav-item ms-lg-2">
+            <a href="contact.html" class="btn btn-brand py-2 px-3 fs-6" id="navHireMeBtn">
+              <i class="bi bi-chat-dots-fill"></i>
+              <span data-i18n="nav_hire_me">Hire Me</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       Page Header
+       ========================================================================= -->
+  <header class="py-5 position-relative border-bottom border-secondary border-opacity-10 bg-glass">
+    <div class="container py-3">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <div class="badge-custom mb-2" data-i18n="sec_services_sub">What I Offer</div>
+          <h1 class="display-5 fw-bold text-white mb-2" data-i18n="sec_services_title">Specialized Design Services</h1>
+          <p class="text-muted lead m-0" data-i18n="sec_services_desc">
+            Crafting bespoke visual solutions tailored to elevate brand identities and engage modern audiences.
+          </p>
         </div>
-    </nav>
-
-    <section class="page-header"><div class="container"><h1 id="pageTitleH1">मेरा सेवाहरू</h1><p id="pageSub">म तपाईंको लागि के गर्न सक्छु ?</p></div></section>
-
-    <section class="section-padding">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-palette"></i><h5 id="s1Title">ग्राफिक डिजाइन</h5><p id="s1Desc">लोगो, पोस्टर, फ्लायर, ब्रोसर र ब्रान्डिङ सामग्रीहरू।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2" id="s1Btn">थप पढ्नुहोस्</a></div></div>
-                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-laptop"></i><h5 id="s2Title">वेब डिजाइन</h5><p id="s2Desc">तपाईंको ब्रान्ड अनुसार रिस्पोन्सिभ, आधुनिक र प्रयोगकर्ता-मैत्री वेबसाइटहरू।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2" id="s2Btn">थप पढ्नुहोस्</a></div></div>
-                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-phone"></i><h5 id="s3Title">UI/UX डिजाइन</h5><p id="s3Desc">मोबाइल एप, वेब एप र सफ्टवेयरको लागि प्रयोगकर्ता-केन्द्रित इन्टरफेसहरू।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2" id="s3Btn">थप पढ्नुहोस्</a></div></div>
-                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-code-square"></i><h5 id="s4Title">वेब विकास</h5><p id="s4Desc">सफा HTML, CSS, बुटस्ट्र्याप र जाभास्क्रिप्ट विकास रिस्पोन्सिभ डिजाइनसहित।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2" id="s4Btn">थप पढ्नुहोस्</a></div></div>
-                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-brush"></i><h5 id="s5Title">लोगो डिजाइन</h5><p id="s5Desc">तपाईंको ब्रान्डको सार कब्जा गर्ने अद्वितीय, यादगार लोगोहरू।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2" id="s5Btn">थप पढ्नुहोस्</a></div></div>
-                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-share"></i><h5 id="s6Title">सोशल मिडिया डिजाइन</h5><p id="s6Desc">इन्स्टाग्राम, फेसबुक र अन्यको लागि आकर्षक पोस्ट, ब्यानर र विज्ञापनहरू।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2" id="s6Btn">थप पढ्नुहोस्</a></div></div>
-                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-image"></i><h5 id="s7Title">फोटो सम्पादन</h5><p id="s7Desc">व्यावसायिक रिटचिङ, रङ करेक्सन र म्यानिपुलेसन।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2" id="s7Btn">थप पढ्नुहोस्</a></div></div>
-                <div class="col-md-6 col-lg-4"><div class="glass-card service-card"><i class="bi bi-person-workspace"></i><h5 id="s8Title">फ्रिलान्सिङ</h5><p id="s8Desc">कुनै पनि प्रोजेक्टको लागि लचिलो, भरपर्दो र उच्च-गुणस्तरीय डिजाइन सेवाहरू।</p><a href="#" class="btn btn-sm btn-outline-primary mt-2" id="s8Btn">थप पढ्नुहोस्</a></div></div>
-            </div>
+        <div class="col-md-4 text-md-end mt-3 mt-md-0">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-md-end m-0">
+              <li class="breadcrumb-item"><a href="index.html" class="text-muted" data-i18n="nav_home">Home</a></li>
+              <li class="breadcrumb-item active text-white" aria-current="page" data-i18n="nav_services">Services</li>
+            </ol>
+          </nav>
         </div>
-    </section>
+      </div>
+    </div>
+  </header>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4"><h5 id="footerName">नारायण प्रसाद मिश्र</h5><p id="footerTitle">ग्राफिक डिजाइनर · UI/UX · वेब डिजाइनर · फ्रिलान्सर</p><div class="social-icons"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-linkedin"></i></a><a href="#"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a></div></div>
-                <div class="col-lg-4"><h5 id="footerLinks">द्रुत लिङ्कहरू</h5><ul><li><a href="index.html" id="fHome">गृहपृष्ठ</a></li><li><a href="about.html" id="fAbout">मेरो बारे</a></li><li><a href="services.html" id="fServices">सेवाहरू</a></li><li><a href="blog.html" id="fBlog">ब्लग</a></li><li><a href="contact.html" id="fContact">सम्पर्क</a></li></ul></div>
-                <div class="col-lg-4"><h5 id="footerContact">सम्पर्क</h5><p><i class="bi bi-geo-alt"></i> <span id="fAddress">बुटवल-१२, नयाँगाउँ, नेपाल</span></p><p><i class="bi bi-phone"></i> <span id="fPhone">९८६७५४९६७५</span></p><p><i class="bi bi-envelope"></i> <span id="fEmail">narayanmishraofficial@gmail.com</span></p></div>
+  <!-- =========================================================================
+       Main Services Grid
+       ========================================================================= -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row g-4">
+        
+        <!-- 1. Graphic Design -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card" id="serviceCardGraphic">
+            <div class="service-icon-box">
+              <i class="bi bi-vector-pen"></i>
             </div>
-            <div class="footer-bottom"><p id="footerCopy">© २०२६ नारायण प्रसाद मिश्र। <i class="bi bi-heart-fill text-danger"></i> ले डिजाइन गरिएको</p></div>
+            <h3 class="service-title" data-i18n="srv_graphic_title">Graphic Design</h3>
+            <p class="service-desc" data-i18n="srv_graphic_desc">
+              Creative visual designs for digital and print requirements tailored to communicate your message effectively.
+            </p>
+            <ul class="service-features">
+              <li><i class="bi bi-check2-circle"></i> Custom Vector Art & Graphic Assets</li>
+              <li><i class="bi bi-check2-circle"></i> Typography Composition & Hierarchy</li>
+              <li><i class="bi bi-check2-circle"></i> Information Design & Infographics</li>
+              <li><i class="bi bi-check2-circle"></i> High-resolution Multi-format Delivery</li>
+            </ul>
+            <div class="mt-auto pt-3">
+              <a href="contact.html" class="btn btn-outline-custom w-100 py-2">
+                <span data-i18n="sec_contact_sub">Inquire Service</span>
+                <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
         </div>
-    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
+        <!-- 2. Logo Design -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card" id="serviceCardLogo">
+            <div class="service-icon-box" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border-color: rgba(245, 158, 11, 0.3);">
+              <i class="bi bi-bezier2"></i>
+            </div>
+            <h3 class="service-title" data-i18n="srv_logo_title">Logo Design</h3>
+            <p class="service-desc" data-i18n="srv_logo_desc">
+              Professional, timeless logo and visual identity designs that leave a memorable brand impression.
+            </p>
+            <ul class="service-features">
+              <li><i class="bi bi-check2-circle"></i> Minimalist & Geometric Brand Marks</li>
+              <li><i class="bi bi-check2-circle"></i> Wordmarks & Monogram Variations</li>
+              <li><i class="bi bi-check2-circle"></i> Full Vector Source Files (AI, EPS, SVG)</li>
+              <li><i class="bi bi-check2-circle"></i> Transparent High-res PNG & Dark/Light Modes</li>
+            </ul>
+            <div class="mt-auto pt-3">
+              <a href="contact.html" class="btn btn-outline-custom w-100 py-2">
+                <span data-i18n="sec_contact_sub">Inquire Service</span>
+                <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Branding -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card" id="serviceCardBranding">
+            <div class="service-icon-box" style="background: rgba(236, 72, 153, 0.15); color: #ec4899; border-color: rgba(236, 72, 153, 0.3);">
+              <i class="bi bi-gem"></i>
+            </div>
+            <h3 class="service-title" data-i18n="srv_branding_title">Branding & Identity</h3>
+            <p class="service-desc" data-i18n="srv_branding_desc">
+              Comprehensive brand identity guidelines, color palettes, typography systems, and marketing collateral.
+            </p>
+            <ul class="service-features">
+              <li><i class="bi bi-check2-circle"></i> Complete Brand Style Guide Book</li>
+              <li><i class="bi bi-check2-circle"></i> Color Palette & Font Pairing System</li>
+              <li><i class="bi bi-check2-circle"></i> Business Cards, Letterheads & Envelopes</li>
+              <li><i class="bi bi-check2-circle"></i> Digital Presentation Pitch Decks</li>
+            </ul>
+            <div class="mt-auto pt-3">
+              <a href="contact.html" class="btn btn-outline-custom w-100 py-2">
+                <span data-i18n="sec_contact_sub">Inquire Service</span>
+                <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Social Media Design -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card" id="serviceCardSocial">
+            <div class="service-icon-box" style="background: rgba(14, 165, 233, 0.15); color: #0ea5e9; border-color: rgba(14, 165, 233, 0.3);">
+              <i class="bi bi-share-fill"></i>
+            </div>
+            <h3 class="service-title" data-i18n="srv_social_title">Social Media Design</h3>
+            <p class="service-desc" data-i18n="srv_social_desc">
+              High-engagement social media posts, advertising banners, stories, and platform-specific promotional graphics.
+            </p>
+            <ul class="service-features">
+              <li><i class="bi bi-check2-circle"></i> Instagram Post & Story Templates</li>
+              <li><i class="bi bi-check2-circle"></i> Facebook Ad Banners & Cover Artwork</li>
+              <li><i class="bi bi-check2-circle"></i> Festival & Special Discount Graphics</li>
+              <li><i class="bi bi-check2-circle"></i> Optimized Sizes for All Social Channels</li>
+            </ul>
+            <div class="mt-auto pt-3">
+              <a href="contact.html" class="btn btn-outline-custom w-100 py-2">
+                <span data-i18n="sec_contact_sub">Inquire Service</span>
+                <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Print Design -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card" id="serviceCardPrint">
+            <div class="service-icon-box" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border-color: rgba(16, 185, 129, 0.3);">
+              <i class="bi bi-printer-fill"></i>
+            </div>
+            <h3 class="service-title" data-i18n="srv_print_title">Print Design</h3>
+            <p class="service-desc" data-i18n="srv_print_desc">
+              High-resolution brochures, flyers, posters, business cards, merchandise, and prepress-ready materials.
+            </p>
+            <ul class="service-features">
+              <li><i class="bi bi-check2-circle"></i> 300 DPI CMYK Prepress Print PDFs</li>
+              <li><i class="bi bi-check2-circle"></i> Bleed & Crop Marks Layouts</li>
+              <li><i class="bi bi-check2-circle"></i> Product Packaging Boxes & Labels</li>
+              <li><i class="bi bi-check2-circle"></i> Flex, Vinyl & Outdoor Hoarding Banners</li>
+            </ul>
+            <div class="mt-auto pt-3">
+              <a href="contact.html" class="btn btn-outline-custom w-100 py-2">
+                <span data-i18n="sec_contact_sub">Inquire Service</span>
+                <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Photo Editing -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card" id="serviceCardPhoto">
+            <div class="service-icon-box" style="background: rgba(168, 85, 247, 0.15); color: #a855f7; border-color: rgba(168, 85, 247, 0.3);">
+              <i class="bi bi-camera-fill"></i>
+            </div>
+            <h3 class="service-title" data-i18n="srv_photo_title">Photo / Creative Editing</h3>
+            <p class="service-desc" data-i18n="srv_photo_desc">
+              Professional creative image editing, advanced retouching, color grading, and visual compositions.
+            </p>
+            <ul class="service-features">
+              <li><i class="bi bi-check2-circle"></i> High-end Portrait & Product Retouching</li>
+              <li><i class="bi bi-check2-circle"></i> Background Removal & Subject Isolation</li>
+              <li><i class="bi bi-check2-circle"></i> Atmospheric Color Grading & Tone Matching</li>
+              <li><i class="bi bi-check2-circle"></i> Creative Visual Manipulation & Composite Art</li>
+            </ul>
+            <div class="mt-auto pt-3">
+              <a href="contact.html" class="btn btn-outline-custom w-100 py-2">
+                <span data-i18n="sec_contact_sub">Inquire Service</span>
+                <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Work Process / Workflow Section
+       ========================================================================= -->
+  <section class="section-padding bg-surface position-relative border-top border-secondary border-opacity-10">
+    <div class="container">
+      <div class="text-center section-header mx-auto" style="max-width: 650px;">
+        <div class="badge-custom mb-2">Design Workflow</div>
+        <h2 class="section-title text-white">How We Bring Ideas To Life</h2>
+        <p class="section-desc mx-auto">A transparent, structured 4-step creative process ensuring precision results.</p>
+      </div>
+
+      <div class="row g-4">
+        
+        <div class="col-lg-3 col-sm-6">
+          <div class="stat-card h-100 text-start p-4">
+            <span class="badge bg-primary fs-6 mb-3">01</span>
+            <h4 class="text-white fs-5 fw-bold mb-2">Discovery & Brief</h4>
+            <p class="text-muted small m-0">Understanding your business goals, target audience demographics, competitors, and aesthetic aspirations.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6">
+          <div class="stat-card h-100 text-start p-4">
+            <span class="badge bg-warning text-dark fs-6 mb-3">02</span>
+            <h4 class="text-white fs-5 fw-bold mb-2">Concepts & Sketch</h4>
+            <p class="text-muted small m-0">Developing moodboards, exploring vector directions, typography pairings, and layout sketches.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6">
+          <div class="stat-card h-100 text-start p-4">
+            <span class="badge bg-info text-dark fs-6 mb-3">03</span>
+            <h4 class="text-white fs-5 fw-bold mb-2">Iteration & Polish</h4>
+            <p class="text-muted small m-0">Incorporating client feedback, refining color harmonies, optimizing spacing, and perfecting details.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6">
+          <div class="stat-card h-100 text-start p-4">
+            <span class="badge bg-success fs-6 mb-3">04</span>
+            <h4 class="text-white fs-5 fw-bold mb-2">Delivery & Support</h4>
+            <p class="text-muted small m-0">Exporting all high-resolution digital assets, print-ready CMYK PDFs, vector source files, and guidelines.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="row g-4">
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <img src="images/icons/logo.svg" alt="NPM Logo" width="34" height="34">
+            <h3 class="footer-brand-title m-0" data-i18n="brand_name">Narayan Prasad Mishra</h3>
+          </div>
+          <p class="small text-muted mb-3" data-i18n="footer_desc">
+            Narayan Prasad Mishra is a professional Graphics Designer based in Butwal, Nepal, specializing in brand identities, print media, and digital graphics.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://facebook.com/npmishraofficial" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Facebook" title="Facebook (@npmishraofficial)"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com/npmishraofficial" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Instagram" title="Instagram (@npmishraofficial)"><i class="bi bi-instagram"></i></a>
+            <a href="https://youtube.com/@npmishraofficial" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="YouTube" title="YouTube Channel (@npmishraofficial)"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+          <h4 class="footer-heading" data-i18n="footer_quick_links">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav_about">About</a></li>
+            <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+            <li><a href="gallery.html" data-i18n="nav_gallery">Gallery</a></li>
+            <li><a href="news.html" data-i18n="nav_news">News</a></li>
+            <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-6">
+          <h4 class="footer-heading" data-i18n="footer_services_links">Design Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html" data-i18n="srv_graphic_title">Graphic Design</a></li>
+            <li><a href="services.html" data-i18n="srv_logo_title">Logo Design</a></li>
+            <li><a href="services.html" data-i18n="srv_branding_title">Branding & Identity</a></li>
+            <li><a href="services.html" data-i18n="srv_social_title">Social Media Design</a></li>
+            <li><a href="services.html" data-i18n="srv_print_title">Print Design</a></li>
+            <li><a href="services.html" data-i18n="srv_photo_title">Photo Editing</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading" data-i18n="footer_contact_info">Contact Information</h4>
+          <ul class="footer-links">
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-geo-alt-fill text-primary"></i>
+              <a href="https://www.google.com/maps/place/Mishra+Niwash/@27.6842177,83.4197148,734m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3996870023d77da5:0x20100287e9455cc3!8m2!3d27.684213!4d83.4222897!16s%2Fg%2F11zh8rxd38?entry=ttu" target="_blank" rel="noopener noreferrer" title="View Mishra Niwash on Google Maps">
+                <span data-i18n="footer_address">Mishra Niwash, Butwal-12, Nepal</span>
+              </a>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-telephone-fill text-success"></i>
+              <a href="tel:9867549675">9867549675</a>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-envelope-fill text-info"></i>
+              <a href="mailto:menpmishra@gmail.com">menpmishra@gmail.com</a>
+            </li>
+            <li class="mt-3">
+              <a href="documents/narayan-prasad-mishra-cv.pdf" target="_blank" class="btn btn-sm btn-outline-custom w-100">
+                <i class="bi bi-file-earmark-pdf me-1"></i> <span data-i18n="about_view_cv">View CV (PDF)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n="footer_copyright">
+          © <span class="current-year">2026</span> Narayan Prasad Mishra. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Back to Top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="js/language.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
